@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Task 6.b
+//  Task6_a
 //
 //  Created by Егор Зайнуллин on 16.04.2021.
 //
