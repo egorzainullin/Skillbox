@@ -12,7 +12,7 @@ protocol ThirdContentViewControllerDelegate {
 }
 
 class ThirdContentViewController: UIViewController {
-
+ 
     var color: UIColor?
     {
         didSet {
@@ -21,18 +21,15 @@ class ThirdContentViewController: UIViewController {
     }
     
     @IBAction func onGreenButtonTouchUp(_ sender: Any) {
-        color = .green
-        delegate?.setColor(color)
+        delegate?.setColor(.green)
     }
     
     @IBAction func onYellowButtonTouchUp(_ sender: Any) {
-        color = .yellow
-        delegate?.setColor(color)
+        delegate?.setColor(.yellow)
     }
     
     @IBAction func onPurpleButtonTouchUp(_ sender: Any) {
-        color = .purple
-        delegate?.setColor(color)
+        delegate?.setColor(.purple)
     }
     
     var delegate: ThirdContentViewControllerDelegate?

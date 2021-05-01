@@ -17,40 +17,29 @@ class ThirdViewController: UIViewController {
     
 
     var contentViewController: ThirdContentViewController?
-    
-    var color: UIColor?
-    {
-        didSet {
-            view.backgroundColor = color
-        }
-    }
         
     @IBAction func onGreenButtonTouchUp(_ sender: Any) {
-        color = .green
-        contentViewController?.color = color
+        contentViewController?.color = .green
     }
     
     @IBAction func onYellowButtonTouchUp(_ sender: Any) {
-        color = .yellow
-        contentViewController?.color = color
+        contentViewController?.color = .yellow
     }
     
     @IBAction func onPurpleButtonTouchUp(_ sender: Any) {
-        color = .purple
-        contentViewController?.color = color
+        contentViewController?.color = .purple
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationViewController = segue.destination as? ThirdContentViewController {
             contentViewController = destinationViewController
             contentViewController?.delegate = self
-            contentViewController?.color = color
         }
     }
 }
 
 extension ThirdViewController: ThirdContentViewControllerDelegate {
     func setColor(_ color: UIColor?) {
-        self.color = color
+        view.backgroundColor = color
     }
 }
