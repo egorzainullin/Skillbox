@@ -11,11 +11,23 @@ class SecondHomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.color = .green
         // Do any additional setup after loading the view.
     }
     
     @IBOutlet weak var colorSelectedLabel: UILabel!
+    
+    var color: UIColor?
+    {
+        didSet {
+            if let unwrappedColor = color {
+                view.backgroundColor = unwrappedColor
+            }
+            else {
+                color = .green
+            }
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationViewContoller = segue.destination as? SecondSubViewController {
@@ -28,7 +40,8 @@ class SecondHomeViewController: UIViewController {
 
 extension SecondHomeViewController: SecondSubViewControllerDelegate {
     func setColor(color: UIColor) {
-        view.backgroundColor = color
+        self.color = color
+        print(color)
         switch color {
         case .green:
             colorSelectedLabel?.text = "Green selected"

@@ -29,21 +29,21 @@ class SecondSubViewController: UIViewController {
     }
 
     @IBAction func onGreenSelected(_ sender: Any) {
-        view.backgroundColor = .green
+        color = .green
         navigationController?.popViewController(animated: true)
-        delegate?.setColor(color:. green)
+        delegate?.setColor(color: color)
     }
     
     @IBAction func onBlueSelected(_ sender: Any) {
-        view.backgroundColor = .blue
+        color = .blue
         navigationController?.popViewController(animated: true)
-        delegate?.setColor(color:. green)
+        delegate?.setColor(color: color)
     }
     
     @IBAction func onRedSelected(_ sender: Any) {
-        view.backgroundColor = .red
+        color = .red
         navigationController?.popViewController(animated: true)
-        delegate?.setColor(color:. green)
+        delegate?.setColor(color: color)
     }
     
     /*
