@@ -18,6 +18,8 @@
 		4B04BF972639780700A3C3DC /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B04BF962639780700A3C3DC /* First.storyboard */; };
 		4B42174E2639C41A004BF1E8 /* SecondHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42174D2639C41A004BF1E8 /* SecondHomeViewController.swift */; };
 		4B421750263C44BC004BF1E8 /* SecondSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42174F263C44BC004BF1E8 /* SecondSubViewController.swift */; };
+		4B421752263D7A20004BF1E8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B421751263D7A20004BF1E8 /* ThirdViewController.swift */; };
+		4B421754263D7A58004BF1E8 /* ThirdContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B421753263D7A58004BF1E8 /* ThirdContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		4B04BF962639780700A3C3DC /* First.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = First.storyboard; sourceTree = "<group>"; };
 		4B42174D2639C41A004BF1E8 /* SecondHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondHomeViewController.swift; sourceTree = "<group>"; };
 		4B42174F263C44BC004BF1E8 /* SecondSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSubViewController.swift; sourceTree = "<group>"; };
+		4B421751263D7A20004BF1E8 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		4B421753263D7A58004BF1E8 /* ThirdContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				4B04BF962639780700A3C3DC /* First.storyboard */,
 				4B04BF922639772900A3C3DC /* Second.storyboard */,
 				4B04BF942639773700A3C3DC /* Third.storyboard */,
+				4B421753263D7A58004BF1E8 /* ThirdContentViewController.swift */,
+				4B421751263D7A20004BF1E8 /* ThirdViewController.swift */,
 			);
 			path = Task7;
 			sourceTree = "<group>";
@@ -159,6 +165,8 @@
 				4B421750263C44BC004BF1E8 /* SecondSubViewController.swift in Sources */,
 				4B42174E2639C41A004BF1E8 /* SecondHomeViewController.swift in Sources */,
 				4B04BF7D263976BC00A3C3DC /* AppDelegate.swift in Sources */,
+				4B421752263D7A20004BF1E8 /* ThirdViewController.swift in Sources */,
+				4B421754263D7A58004BF1E8 /* ThirdContentViewController.swift in Sources */,
 				4B04BF7F263976BC00A3C3DC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
