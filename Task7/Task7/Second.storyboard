@@ -36,6 +36,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ot8-nE-f4Y"/>
+                    <connections>
+                        <outlet property="colorSelectedLabel" destination="Qc5-ij-NaR" id="PzV-Y0-HqW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,6 +88,9 @@
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="kyK-MH-U1B"/>
+                    <connections>
+                        <outlet property="colorSelectedLabel" destination="EnM-gX-uJ4" id="f1a-Vs-Fmg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="irk-ro-BFI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

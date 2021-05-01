@@ -12,6 +12,7 @@ class SecondHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.color = .green
+        colorSelectedLabel.text = "Green selected"
         // Do any additional setup after loading the view.
     }
     
@@ -32,6 +33,9 @@ class SecondHomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationViewContoller = segue.destination as? SecondSubViewController {
             destinationViewContoller.delegate = self
+            if let unwrappedColor = color {
+                destinationViewContoller.color = unwrappedColor
+            }
             print("delegate is set")
         }
     }

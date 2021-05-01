@@ -19,8 +19,20 @@ class SecondSubViewController: UIViewController {
     {
         didSet {
             view.backgroundColor = color
+            switch color {
+            case .green:
+                colorSelectedLabel?.text = "Green selected"
+            case .blue:
+                colorSelectedLabel?.text = "Blue selected"
+            case .red:
+                colorSelectedLabel?.text = "Red selected"
+            default:
+                colorSelectedLabel?.text = "Unknown color"
+            }
         }
     }
+    
+    @IBOutlet weak var colorSelectedLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
