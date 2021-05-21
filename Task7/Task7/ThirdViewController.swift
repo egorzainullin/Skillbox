@@ -15,7 +15,6 @@ class ThirdViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
     var contentViewController: ThirdContentViewController?
         
     @IBAction func onGreenButtonTouchUp(_ sender: Any) {
