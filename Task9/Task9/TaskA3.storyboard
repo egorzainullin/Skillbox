@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2E-Zd-ghP">
+                                <rect key="frame" x="8" y="526.5" width="398" height="146.5"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" systemColor="systemGrayColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TH-Ku-MnZ">
+                                <rect key="frame" x="8" y="373.5" width="398" height="149"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5K-g6-Yi4">
+                                <rect key="frame" x="8" y="193" width="398" height="176.5"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="F5K-g6-Yi4" secondAttribute="trailing" constant="8" id="1Ad-O5-Z32"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="L2E-Zd-ghP" secondAttribute="trailing" constant="8" id="2OJ-RM-W8X"/>
+                            <constraint firstItem="L2E-Zd-ghP" firstAttribute="height" secondItem="9TH-Ku-MnZ" secondAttribute="height" multiplier="0.979866" id="4GK-cq-lp8"/>
+                            <constraint firstItem="L2E-Zd-ghP" firstAttribute="top" secondItem="9TH-Ku-MnZ" secondAttribute="bottom" constant="4" id="Ab1-AO-m3u"/>
+                            <constraint firstItem="9TH-Ku-MnZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="C8l-A0-kpf"/>
+                            <constraint firstItem="9TH-Ku-MnZ" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.5/3" id="Gdx-0T-kUE"/>
+                            <constraint firstItem="9TH-Ku-MnZ" firstAttribute="height" secondItem="F5K-g6-Yi4" secondAttribute="height" multiplier="0.846591" id="Qhp-Jf-bn2"/>
+                            <constraint firstItem="9TH-Ku-MnZ" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Uav-BW-r80"/>
+                            <constraint firstItem="F5K-g6-Yi4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="WsV-aF-VdI"/>
+                            <constraint firstItem="L2E-Zd-ghP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="bEE-Ly-tKZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9TH-Ku-MnZ" secondAttribute="trailing" constant="8" id="dYs-4i-R7k"/>
+                            <constraint firstItem="9TH-Ku-MnZ" firstAttribute="top" secondItem="F5K-g6-Yi4" secondAttribute="bottom" constant="4" id="mxl-0W-MWe"/>
+                            <constraint firstItem="L2E-Zd-ghP" firstAttribute="top" secondItem="9TH-Ku-MnZ" secondAttribute="bottom" constant="4" id="nDr-wt-8Im"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
