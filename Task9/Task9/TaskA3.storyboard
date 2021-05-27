@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2E-Zd-ghP">
-                                <rect key="frame" x="8" y="526.5" width="398" height="146.5"/>
+                                <rect key="frame" x="8" y="526.5" width="398" height="149.5"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" systemColor="systemGrayColor"/>
@@ -29,7 +29,7 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5K-g6-Yi4">
-                                <rect key="frame" x="8" y="193" width="398" height="176.5"/>
+                                <rect key="frame" x="8" y="220" width="398" height="149.5"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
                             </button>
@@ -39,17 +39,19 @@
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="F5K-g6-Yi4" secondAttribute="trailing" constant="8" id="1Ad-O5-Z32"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="L2E-Zd-ghP" secondAttribute="trailing" constant="8" id="2OJ-RM-W8X"/>
-                            <constraint firstItem="L2E-Zd-ghP" firstAttribute="height" secondItem="9TH-Ku-MnZ" secondAttribute="height" multiplier="0.979866" id="4GK-cq-lp8"/>
+                            <constraint firstItem="L2E-Zd-ghP" firstAttribute="height" secondItem="9TH-Ku-MnZ" secondAttribute="height" id="4GK-cq-lp8"/>
+                            <constraint firstItem="L2E-Zd-ghP" firstAttribute="width" secondItem="9TH-Ku-MnZ" secondAttribute="width" id="91Y-RV-NBI"/>
                             <constraint firstItem="L2E-Zd-ghP" firstAttribute="top" secondItem="9TH-Ku-MnZ" secondAttribute="bottom" constant="4" id="Ab1-AO-m3u"/>
                             <constraint firstItem="9TH-Ku-MnZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="C8l-A0-kpf"/>
                             <constraint firstItem="9TH-Ku-MnZ" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.5/3" id="Gdx-0T-kUE"/>
-                            <constraint firstItem="9TH-Ku-MnZ" firstAttribute="height" secondItem="F5K-g6-Yi4" secondAttribute="height" multiplier="0.846591" id="Qhp-Jf-bn2"/>
+                            <constraint firstItem="9TH-Ku-MnZ" firstAttribute="height" secondItem="F5K-g6-Yi4" secondAttribute="height" id="Qhp-Jf-bn2"/>
                             <constraint firstItem="9TH-Ku-MnZ" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Uav-BW-r80"/>
                             <constraint firstItem="F5K-g6-Yi4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="WsV-aF-VdI"/>
                             <constraint firstItem="L2E-Zd-ghP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="bEE-Ly-tKZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9TH-Ku-MnZ" secondAttribute="trailing" constant="8" id="dYs-4i-R7k"/>
                             <constraint firstItem="9TH-Ku-MnZ" firstAttribute="top" secondItem="F5K-g6-Yi4" secondAttribute="bottom" constant="4" id="mxl-0W-MWe"/>
                             <constraint firstItem="L2E-Zd-ghP" firstAttribute="top" secondItem="9TH-Ku-MnZ" secondAttribute="bottom" constant="4" id="nDr-wt-8Im"/>
+                            <constraint firstItem="F5K-g6-Yi4" firstAttribute="width" secondItem="9TH-Ku-MnZ" secondAttribute="width" id="pN1-70-lKc"/>
                         </constraints>
                     </view>
                 </viewController>
