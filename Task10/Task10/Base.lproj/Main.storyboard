@@ -21,10 +21,49 @@
                                 <rect key="frame" x="0.0" y="33" width="414" height="842"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YXA-aT-3H8">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1292"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фото" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pT-ac-1N5">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                                <color key="backgroundColor" systemColor="linkColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="jYo-Ji-3TG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Бургерная Джо" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECM-5l-fWi">
+                                                <rect key="frame" x="0.0" y="100" width="414" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ijw-Yc-sJR" userLabel="Horizontal Stack View">
+                                                <rect key="frame" x="0.0" y="130" width="414" height="100"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Скидка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brk-Nt-77B">
+                                                        <rect key="frame" x="0.0" y="0.0" width="196" height="100"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAf-MC-WC3">
+                                                        <rect key="frame" x="196" y="0.0" width="218" height="100"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="qrc-HW-yJG"/>
+                                                </constraints>
+                                            </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCD-5k-XXd">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                                <rect key="frame" x="0.0" y="230" width="414" height="1000"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1000" id="Rm3-EU-6PW"/>
                                                 </constraints>
@@ -37,8 +76,28 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jw-Ay-MRz">
+                                                <rect key="frame" x="0.0" y="1230" width="414" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Создать событие"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5P-F1-d4d">
+                                                <rect key="frame" x="0.0" y="1261" width="414" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="На вынос"/>
+                                            </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="ijw-Yc-sJR" firstAttribute="width" secondItem="ECM-5l-fWi" secondAttribute="width" id="9yO-jB-I1q"/>
+                                            <constraint firstItem="1pT-ac-1N5" firstAttribute="leading" secondItem="YXA-aT-3H8" secondAttribute="leading" id="DA7-sA-JVg"/>
+                                            <constraint firstItem="3jw-Ay-MRz" firstAttribute="width" secondItem="kCD-5k-XXd" secondAttribute="width" id="EsB-2g-JZi"/>
+                                            <constraint firstAttribute="trailing" secondItem="1pT-ac-1N5" secondAttribute="trailing" id="H3N-Se-cW2"/>
+                                            <constraint firstItem="P5P-F1-d4d" firstAttribute="width" secondItem="3jw-Ay-MRz" secondAttribute="width" id="T2A-Zg-YHi"/>
+                                            <constraint firstItem="ECM-5l-fWi" firstAttribute="leading" secondItem="YXA-aT-3H8" secondAttribute="leading" id="Vys-mZ-dZS"/>
+                                            <constraint firstItem="ijw-Yc-sJR" firstAttribute="top" secondItem="ECM-5l-fWi" secondAttribute="bottom" id="baw-KM-JAk"/>
+                                            <constraint firstAttribute="trailing" secondItem="ECM-5l-fWi" secondAttribute="trailing" id="bfI-L8-abf"/>
+                                            <constraint firstItem="1pT-ac-1N5" firstAttribute="top" secondItem="YXA-aT-3H8" secondAttribute="top" id="dwO-Qh-YCu"/>
+                                            <constraint firstItem="ECM-5l-fWi" firstAttribute="top" secondItem="1pT-ac-1N5" secondAttribute="bottom" id="fsg-dE-9uw"/>
                                             <constraint firstItem="kCD-5k-XXd" firstAttribute="width" secondItem="YXA-aT-3H8" secondAttribute="width" id="jts-oq-id7"/>
                                         </constraints>
                                     </stackView>
@@ -73,8 +132,17 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
