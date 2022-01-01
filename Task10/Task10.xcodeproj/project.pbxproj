@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B743CF22780952800CE270B /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B743CF12780952800CE270B /* ProductViewController.swift */; };
+		4B743CF42780955300CE270B /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B743CF32780955300CE270B /* ProductCollectionViewCell.swift */; };
 		4BC0234E272D7E030032B33F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC0234D272D7E030032B33F /* AppDelegate.swift */; };
 		4BC02350272D7E030032B33F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC0234F272D7E030032B33F /* SceneDelegate.swift */; };
 		4BC02352272D7E030032B33F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC02351272D7E030032B33F /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B743CF12780952800CE270B /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		4B743CF32780955300CE270B /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		4BC0234A272D7E030032B33F /* Task10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Task10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC0234D272D7E030032B33F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BC0234F272D7E030032B33F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 		4BC0234C272D7E030032B33F /* Task10 */ = {
 			isa = PBXGroup;
 			children = (
+				4B743CF32780955300CE270B /* ProductCollectionViewCell.swift */,
+				4B743CF12780952800CE270B /* ProductViewController.swift */,
 				4BC0234D272D7E030032B33F /* AppDelegate.swift */,
 				4BC0234F272D7E030032B33F /* SceneDelegate.swift */,
 				4BC02351272D7E030032B33F /* ViewController.swift */,
@@ -139,6 +145,8 @@
 			files = (
 				4BC02352272D7E030032B33F /* ViewController.swift in Sources */,
 				4BC0234E272D7E030032B33F /* AppDelegate.swift in Sources */,
+				4B743CF42780955300CE270B /* ProductCollectionViewCell.swift in Sources */,
+				4B743CF22780952800CE270B /* ProductViewController.swift in Sources */,
 				4BC02350272D7E030032B33F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
