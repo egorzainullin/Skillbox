@@ -17,7 +17,6 @@ class ProductViewController: ViewController {
     
 var names = ["Nikita", "Anton", "Andrey", "Nikita", "Anton", "Andrey", "Nikita", "Anton", "Andrey", "Nikita", "Anton", "Andrey"]
     
-
 }
 
 extension ProductViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -28,13 +27,13 @@ extension ProductViewController: UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as! ProductCollectionViewCell
-        cell.nameLabel.text = "1"
+        cell.nameLabel.text = names[indexPath.row]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let w = UIScreen.main.bounds.size.width / 2
-        return CGSize(width: w, height: w)
+        return CGSize(width: w, height: 1.5 * w)
     }
 
 }
