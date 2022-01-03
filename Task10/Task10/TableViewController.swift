@@ -16,7 +16,7 @@ struct Meetup{
 struct Setting {
     var name: String
     var slider: Bool?
-    var hint: Bool?
+    var hint: String?
     var imageSource: String
 }
 
@@ -46,17 +46,29 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SectionCell") as! TableSliderViewCell
-        cell.nameLabel.text = "Hey"
-        print("hey")
+        cell.nameLabel.text = ""
         return cell
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell1 = tableView.dequeueReusableCell(withIdentifier: "LinkCell")
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LinkCell") as! TableLinkViewCell
         let setting = settings[indexPath.section][indexPath.row]
-        cell.nameLabel.text = setting.name
-        return cell
+        if let hint = setting.hint {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LinkAndHintCell") as! TableLinkAndHintViewCell
+            cell.nameLabel.text = setting.name
+            cell.hintLabel.text = hint
+            return cell
+        }
+        else if let isSliderOn = setting.slider {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SliderCell") as! TableSliderViewCell
+            cell.nameLabel.text = setting.name
+            cell.sliderSwitch.isOn = isSliderOn
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LinkCell") as! TableLinkViewCell
+            cell.nameLabel.text = setting.name
+            return cell
+        }
     }
     
 }
