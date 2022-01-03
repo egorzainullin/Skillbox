@@ -44,10 +44,6 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate{
         return settings[section].count
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return meetups[section].date
-//    }
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SectionCell") as! TableSliderViewCell
         cell.nameLabel.text = "Hey"
@@ -56,6 +52,7 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell1 = tableView.dequeueReusableCell(withIdentifier: "LinkCell")
         let cell = tableView.dequeueReusableCell(withIdentifier: "LinkCell") as! TableLinkViewCell
         let setting = settings[indexPath.section][indexPath.row]
         cell.nameLabel.text = setting.name
