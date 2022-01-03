@@ -13,21 +13,21 @@ struct Meetup{
     var names: [String] = []
 }
 
-class MeetupFabric{
-    static func meetups() -> [Meetup]{
-        return [
-            Meetup(date: "Сегодня", names: ["Nikita", "Anton", "Andrey"]),
-            Meetup(date: "Вчера", names: ["Nikita", "Andrey"]),
-            Meetup(date: "10.07.18", names: ["Nikita", "Anton"])
-        ]
-    }
+struct Setting {
+    var name: String
+    var slider: Bool?
+    var hint: Bool?
+    var imageSource: String
 }
 
-class TableViewController: UIViewController {
-    var meetups = MeetupFabric.meetups()
+func generateTable() -> [[Setting]] {
+    return [[Setting(name: "Авиарежим", slider: true, hint: nil, imageSource: "avia")],
+            [Setting(name: "Уведомления", slider: nil, hint: nil, imageSource: "notifications")]]
+}
 
-    @IBOutlet weak var tableView: UITableView!
-    
+let settings = generateTable()
+
+class TableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,11 +37,11 @@ class TableViewController: UIViewController {
 
 extension TableViewController: UITableViewDataSource, UITableViewDelegate{
     func numberOfSections(in tableView: UITableView) -> Int {
-        return meetups.count
+        return settings.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return meetups[section].names.count
+        return settings[section].count
     }
     
 //    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -56,14 +56,10 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableSliderCell") as! TableSliderViewCell
-        let name = meetups[indexPath.section].names[indexPath.row]
-        cell.nameLabel.text = name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LinkCell") as! TableLinkViewCell
+        let setting = settings[indexPath.section][indexPath.row]
+        cell.nameLabel.text = setting.name
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print(names[indexPath.row])
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
 }
