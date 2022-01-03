@@ -139,7 +139,7 @@
         <!--Task2-->
         <scene sceneID="ezX-Sz-Vmf">
             <objects>
-                <viewController title="Task2" id="ntN-Ff-PVQ" sceneMemberID="viewController">
+                <viewController title="Task2" id="ntN-Ff-PVQ" customClass="TableViewController" customModule="Task10" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IQ3-xh-2YB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,7 +149,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oGF-60-v14">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableLinkCell" id="oGF-60-v14" customClass="TableLinkViewCell" customModule="Task10" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="50.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oGF-60-v14" id="V31-n5-Oop">
@@ -193,8 +193,11 @@
                                                 <constraint firstItem="BiO-jy-JPa" firstAttribute="leading" secondItem="a9x-Im-5Z7" secondAttribute="trailing" id="vpa-a0-bPP"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="a9x-Im-5Z7" id="1El-BF-KAh"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Qyp-ja-JwT">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableSliderCell" id="Qyp-ja-JwT" customClass="TableSliderViewCell" customModule="Task10" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="95" width="414" height="50.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qyp-ja-JwT" id="yRz-dK-8hR">
@@ -232,8 +235,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="64w-V1-h4k" secondAttribute="bottom" id="uCb-dO-D7G"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="CfJ-R4-MJq" id="bbW-51-Uzv"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="TIq-7E-m4G">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableLinkAndHintCell" id="TIq-7E-m4G" customClass="TableLinkAndHintViewCell" customModule="Task10" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="145.5" width="414" height="50.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TIq-7E-m4G" id="qSl-Ym-MoK">
@@ -288,7 +294,40 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SectionCell" id="uqn-FB-sOe" customClass="TableSliderViewCell" customModule="Task10" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="196" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uqn-FB-sOe" id="me1-9d-3JD">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FD-PB-8jp">
+                                                    <rect key="frame" x="20" y="11" width="374" height="21.5"/>
+                                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="ctY-8S-hgI"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3FD-PB-8jp" firstAttribute="top" secondItem="me1-9d-3JD" secondAttribute="topMargin" id="AAc-XI-TIX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="3FD-PB-8jp" secondAttribute="bottom" id="JkI-51-cHN"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3FD-PB-8jp" secondAttribute="trailing" id="QKK-Bh-aSL"/>
+                                                <constraint firstItem="3FD-PB-8jp" firstAttribute="leading" secondItem="me1-9d-3JD" secondAttribute="leadingMargin" id="pWj-Sr-yRG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="3FD-PB-8jp" id="Dr2-mY-5vH"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ntN-Ff-PVQ" id="PDR-wB-Mn3"/>
+                                    <outlet property="delegate" destination="ntN-Ff-PVQ" id="t4a-hN-neg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lG8-yF-s3P"/>
@@ -343,6 +382,7 @@
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="ZqO-Df-rco" id="cnR-Z6-X0j"/>
+                                    <outlet property="delegate" destination="ZqO-Df-rco" id="HQC-7g-e72"/>
                                 </connections>
                             </collectionView>
                         </subviews>
@@ -366,6 +406,9 @@
     <resources>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

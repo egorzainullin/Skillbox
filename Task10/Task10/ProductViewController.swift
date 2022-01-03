@@ -14,6 +14,19 @@ class ProductViewController: ViewController {
 
         // Do any additional setup after loading the view.
     }
+
+    struct Product {
+        var name: String
+        var cost: Double
+        var sale: Double
+        var image: String
+        init(name: String, cost: Double, sale: Double, image: String) {
+            self.name = name
+            self.cost = cost
+            self.sale = sale
+            self.image = image
+        }
+    }
     
 var names = ["Nikita", "Anton", "Andrey", "Nikita", "Anton", "Andrey", "Nikita", "Anton", "Andrey", "Nikita", "Anton", "Andrey"]
     
@@ -32,8 +45,9 @@ extension ProductViewController: UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let w = UIScreen.main.bounds.size.width / 2
-        return CGSize(width: w, height: 1.5 * w)
+        let width = UIScreen.main.bounds.size.width / 3
+        let height = width * 2
+        return CGSize(width: width, height: height)
     }
 
 }
