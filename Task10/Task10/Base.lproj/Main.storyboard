@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Frt-1c-ktm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Frt-1c-ktm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -144,7 +144,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QwN-oD-5Ug">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QwN-oD-5Ug">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -190,6 +190,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="imageImageView" destination="Ad7-J9-wt0" id="ONr-RB-YBw"/>
                                             <outlet property="nameLabel" destination="a9x-Im-5Z7" id="1El-BF-KAh"/>
                                         </connections>
                                     </tableViewCell>
@@ -213,25 +214,27 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qHe-9k-IkY">
-                                                    <rect key="frame" x="345" y="0.0" width="51" height="50.5"/>
+                                                <switch opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qHe-9k-IkY">
+                                                    <rect key="frame" x="345" y="10" width="51" height="40.5"/>
                                                 </switch>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="CfJ-R4-MJq" secondAttribute="bottom" id="3xI-UC-hA8"/>
+                                                <constraint firstItem="qHe-9k-IkY" firstAttribute="top" secondItem="yRz-dK-8hR" secondAttribute="top" constant="10" id="4Yu-bR-1jA"/>
                                                 <constraint firstItem="qHe-9k-IkY" firstAttribute="leading" secondItem="CfJ-R4-MJq" secondAttribute="trailing" id="5Hl-py-ULh"/>
                                                 <constraint firstItem="64w-V1-h4k" firstAttribute="leading" secondItem="yRz-dK-8hR" secondAttribute="leading" id="CkZ-nW-uaa"/>
                                                 <constraint firstItem="64w-V1-h4k" firstAttribute="top" secondItem="yRz-dK-8hR" secondAttribute="top" id="Fyh-ik-qWu"/>
                                                 <constraint firstItem="qHe-9k-IkY" firstAttribute="leading" secondItem="CfJ-R4-MJq" secondAttribute="trailing" id="R48-DV-sFz"/>
                                                 <constraint firstItem="CfJ-R4-MJq" firstAttribute="top" secondItem="yRz-dK-8hR" secondAttribute="topMargin" id="a7G-Pw-CEz"/>
                                                 <constraint firstItem="CfJ-R4-MJq" firstAttribute="leading" secondItem="64w-V1-h4k" secondAttribute="trailing" id="foW-QS-F2v"/>
-                                                <constraint firstItem="qHe-9k-IkY" firstAttribute="top" secondItem="yRz-dK-8hR" secondAttribute="top" id="gLq-Tn-Cir"/>
                                                 <constraint firstAttribute="trailing" secondItem="qHe-9k-IkY" secondAttribute="trailing" constant="20" id="jgU-9y-Dn3"/>
                                                 <constraint firstAttribute="bottom" secondItem="qHe-9k-IkY" secondAttribute="bottom" id="jiO-rV-TF1"/>
                                                 <constraint firstAttribute="bottom" secondItem="64w-V1-h4k" secondAttribute="bottom" id="uCb-dO-D7G"/>
+                                                <constraint firstItem="qHe-9k-IkY" firstAttribute="centerY" secondItem="yRz-dK-8hR" secondAttribute="centerY" id="xAU-LW-Szf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="imageImageView" destination="64w-V1-h4k" id="wc0-QY-Lzr"/>
                                             <outlet property="nameLabel" destination="CfJ-R4-MJq" id="bbW-51-Uzv"/>
                                             <outlet property="sliderSwitch" destination="qHe-9k-IkY" id="Lht-eB-son"/>
                                         </connections>
@@ -299,9 +302,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FD-PB-8jp">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FD-PB-8jp">
                                                     <rect key="frame" x="20" y="11" width="374" height="21.5"/>
-                                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="ctY-8S-hgI"/>
                                                     </constraints>
@@ -410,6 +413,7 @@
         <!--Navigation Controller-->
         <scene sceneID="R9i-NV-Jq2">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0aD-R9-gdZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Frt-1c-ktm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="epq-7f-oGa">
@@ -421,7 +425,6 @@
                         <segue destination="duj-r1-xAe" kind="relationship" relationship="rootViewController" id="xU7-IF-tnY"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0aD-R9-gdZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1881" y="78"/>
         </scene>
@@ -430,14 +433,14 @@
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

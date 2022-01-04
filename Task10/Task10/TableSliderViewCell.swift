@@ -11,5 +11,7 @@ class TableSliderViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
    
+    @IBOutlet weak var imageImageView: UIImageView!
+    
     @IBOutlet weak var sliderSwitch: UISwitch!
 }

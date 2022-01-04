@@ -9,5 +9,7 @@ import UIKit
 
 class TableLinkViewCell: UITableViewCell {
 
+    @IBOutlet weak var imageImageView: UIImageView!
+    
     @IBOutlet weak var nameLabel: UILabel!
 }

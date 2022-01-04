@@ -7,12 +7,6 @@
 
 import UIKit
 
-
-struct Meetup{
-    var date = ""
-    var names: [String] = []
-}
-
 struct Setting {
     var name: String
     var slider: Bool?
@@ -47,6 +41,11 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SectionCell") as! TableSliderViewCell
         cell.nameLabel.text = ""
+        if section == 0 {
+            let settingsString = "Настройки"
+            cell.nameLabel.text = settingsString
+        }
+        // Не получается на всю ширину экрана сделать
         return cell
     }
     
@@ -56,19 +55,24 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate{
             let cell = tableView.dequeueReusableCell(withIdentifier: "LinkAndHintCell") as! TableLinkAndHintViewCell
             cell.nameLabel.text = setting.name
             cell.hintLabel.text = hint
+            cell.imageImageView.image = UIImage(named: setting.imageSource)
             return cell
         }
         else if let isSliderOn = setting.slider {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SliderCell") as! TableSliderViewCell
             cell.nameLabel.text = setting.name
             cell.sliderSwitch.isOn = isSliderOn
+            cell.imageImageView.image = UIImage(named: setting.imageSource)
             return cell
+            //
         }
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "LinkCell") as! TableLinkViewCell
             cell.nameLabel.text = setting.name
+            cell.imageImageView.image = UIImage(named: setting.imageSource)
             return cell
         }
     }
-    
 }
+
+
