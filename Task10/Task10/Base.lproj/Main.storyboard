@@ -239,7 +239,7 @@
                                             <outlet property="sliderSwitch" destination="qHe-9k-IkY" id="Lht-eB-son"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="LinkAndHintCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableLinkAndHintCell" id="TIq-7E-m4G" customClass="TableLinkAndHintViewCell" customModule="Task10" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="LinkAndHintCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LinkAndHintCell" id="TIq-7E-m4G" customClass="TableLinkAndHintViewCell" customModule="Task10" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="145.5" width="414" height="50.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TIq-7E-m4G" id="qSl-Ym-MoK">
@@ -253,20 +253,20 @@
                                                         <constraint firstAttribute="width" constant="50" id="mZF-ob-NEE"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCS-WI-LdV">
-                                                    <rect key="frame" x="91.5" y="0.0" width="302.5" height="50.5"/>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCS-WI-LdV">
+                                                    <rect key="frame" x="359.5" y="0.0" width="34.5" height="50.5"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="&gt;">
                                                         <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                                     </buttonConfiguration>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ne-87-Aph">
-                                                    <rect key="frame" x="50" y="11" width="41.5" height="28.5"/>
+                                                    <rect key="frame" x="50" y="11" width="309.5" height="28.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Gray" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0U8-bq-5fC">
-                                                    <rect key="frame" x="50" y="11" width="41.5" height="28.5"/>
+                                                    <rect key="frame" x="50" y="11" width="309.5" height="28.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemGray2Color"/>
                                                     <nil key="highlightedColor"/>
@@ -284,6 +284,8 @@
                                                 <constraint firstAttribute="bottom" secondItem="zCS-WI-LdV" secondAttribute="bottom" id="TTP-y3-Wzf"/>
                                                 <constraint firstItem="zCS-WI-LdV" firstAttribute="leading" secondItem="7ne-87-Aph" secondAttribute="trailing" id="TeB-mZ-ggu"/>
                                                 <constraint firstItem="zCS-WI-LdV" firstAttribute="leading" secondItem="0U8-bq-5fC" secondAttribute="trailing" id="UeS-Zx-FLj"/>
+                                                <constraint firstItem="0U8-bq-5fC" firstAttribute="height" secondItem="7ne-87-Aph" secondAttribute="height" id="aO0-Wk-0A6"/>
+                                                <constraint firstItem="0U8-bq-5fC" firstAttribute="width" secondItem="7ne-87-Aph" secondAttribute="width" id="djH-hX-2hF"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="7ne-87-Aph" secondAttribute="bottom" id="mEF-Ce-WNo"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="0U8-bq-5fC" secondAttribute="bottom" id="xX8-Q5-2Vk"/>
                                                 <constraint firstItem="7ne-87-Aph" firstAttribute="leading" secondItem="WeE-TG-Swv" secondAttribute="trailing" id="yOl-kM-g8q"/>
@@ -292,7 +294,7 @@
                                         <connections>
                                             <outlet property="hintLabel" destination="0U8-bq-5fC" id="wab-6K-HG5"/>
                                             <outlet property="imageImageView" destination="WeE-TG-Swv" id="Yb1-xO-Wvm"/>
-                                            <outlet property="nameLabel" destination="0U8-bq-5fC" id="17W-lD-bM1"/>
+                                            <outlet property="nameLabel" destination="7ne-87-Aph" id="4AR-Zz-oAA"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SectionCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SectionCell" id="uqn-FB-sOe" customClass="TableSliderViewCell" customModule="Task10" customModuleProvider="target">
@@ -344,7 +346,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fP9-YU-CKv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3086" y="78"/>
+            <point key="canvasLocation" x="3085.507246376812" y="77.678571428571431"/>
         </scene>
         <!--Task1-->
         <scene sceneID="euP-rJ-oo3">

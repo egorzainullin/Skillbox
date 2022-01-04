@@ -15,7 +15,11 @@ struct Setting {
 }
 
 func generateTable() -> [[Setting]] {
-    return [[Setting(name: "Авиарежим", slider: true, hint: nil, imageSource: "avia")],
+    return [[Setting(name: "Авиарежим", slider: true, hint: nil, imageSource: "avia"),
+             Setting(name: "Wi-Fi", slider: nil, hint: "Anvics-Yota", imageSource: "wifi"),
+             Setting(name: "Bluetooth", slider: nil, hint: "Вкл.", imageSource: "bluetooth"),
+             Setting(name: "Сотовая связь", slider: nil, hint: nil, imageSource: "cellular"),
+             Setting(name: "Режим модема", slider: nil, hint: nil, imageSource: "modem_mode")],
             [Setting(name: "Уведомления", slider: nil, hint: nil, imageSource: "notifications")]]
 }
 
@@ -29,7 +33,8 @@ class TableViewController: UIViewController {
     }
 }
 
-extension TableViewController: UITableViewDataSource, UITableViewDelegate{
+extension TableViewController: UITableViewDataSource, UITableViewDelegate {
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return settings.count
     }
@@ -54,6 +59,7 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate{
         if let hint = setting.hint {
             let cell = tableView.dequeueReusableCell(withIdentifier: "LinkAndHintCell") as! TableLinkAndHintViewCell
             cell.nameLabel.text = setting.name
+            print(setting.name)
             cell.hintLabel.text = hint
             cell.imageImageView.image = UIImage(named: setting.imageSource)
             return cell
@@ -72,6 +78,10 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate{
             cell.imageImageView.image = UIImage(named: setting.imageSource)
             return cell
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
