@@ -32,7 +32,8 @@ var names = ["Nikita", "Anton", "Andrey", "Nikita", "Anton", "Andrey", "Nikita",
     
 }
 
-extension ProductViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension ProductViewController: UICollectionViewDataSource, UICollectionViewDelegate,
+UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return names.count
@@ -45,7 +46,7 @@ extension ProductViewController: UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = UIScreen.main.bounds.size.width / 3
+        let width = UIScreen.main.bounds.size.width / 2
         let height = width * 2
         return CGSize(width: width, height: height)
     }
