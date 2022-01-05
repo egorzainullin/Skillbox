@@ -46,7 +46,7 @@ UICollectionViewDelegateFlowLayout{
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = UIScreen.main.bounds.size.width / 2
+        let width = UIScreen.main.bounds.size.width / 3
         let height = width * 2
         return CGSize(width: width, height: height)
     }
