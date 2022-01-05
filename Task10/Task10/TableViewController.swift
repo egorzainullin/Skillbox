@@ -15,12 +15,15 @@ struct Setting {
 }
 
 func generateTable() -> [[Setting]] {
-    return [[Setting(name: "Авиарежим", slider: true, hint: nil, imageSource: "avia"),
-             Setting(name: "Wi-Fi", slider: nil, hint: "Anvics-Yota", imageSource: "wifi"),
-             Setting(name: "Bluetooth", slider: nil, hint: "Вкл.", imageSource: "bluetooth"),
-             Setting(name: "Сотовая связь", slider: nil, hint: nil, imageSource: "cellular"),
-             Setting(name: "Режим модема", slider: nil, hint: nil, imageSource: "modem_mode")],
-            [Setting(name: "Уведомления", slider: nil, hint: nil, imageSource: "notifications")]]
+    return [[Setting(name: "Авиарежим", slider: true, hint: nil, imageSource: "riddler"),
+             Setting(name: "Wi-Fi", slider: nil, hint: "Anvics-Yota", imageSource: "cat1"),
+             Setting(name: "Bluetooth", slider: nil, hint: "Вкл.", imageSource: "cat2"),
+             Setting(name: "Сотовая связь", slider: nil, hint: nil, imageSource: "cat3"),
+             Setting(name: "Режим модема", slider: nil, hint: nil, imageSource: "cat4")],
+            [Setting(name: "Уведомления", slider: nil, hint: nil, imageSource: "cat5"),
+            Setting(name: "Звуки, тактильные сигналы", slider: nil, hint: nil, imageSource: "cat6"),
+            Setting(name: "Не беспокоить", slider: nil, hint: nil, imageSource: "cat7"),
+            Setting(name: "Экранное время", slider: nil, hint: nil, imageSource: "cat8")]]
 }
 
 let settings = generateTable()
