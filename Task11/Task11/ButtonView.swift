@@ -7,19 +7,27 @@
 
 import UIKit
 
-@IBDesignable
+//@IBDesignable
 class ButtonView: UIView {
     
-    @IBInspectable
-    var width: CGFloat = 100
+    private var isSetuped = false
     
     @IBInspectable
-    var radius: CGFloat = 70
+    var width: CGFloat = 100.0
+    { didSet { updateWidth(width) }}
+    
+    @IBInspectable
+    var radius: CGFloat = 10.0
     { didSet { updateRadius(radius) } }
     
     @IBInspectable
     var edgeColor: UIColor = .green
     { didSet { updateColor(edgeColor) } }
+    
+    private func updateWidth(_ width: CGFloat) {
+        frame.size.width = width
+        layoutIfNeeded()
+    }
     
     private func updateColor(_ color: UIColor) {
         backgroundColor = color
@@ -33,7 +41,7 @@ class ButtonView: UIView {
             layer.cornerRadius = radius
             button.layer.cornerRadius = radius - delta
         }
-        
+        layoutIfNeeded()
     }
     
     private let button = UIButton()
@@ -41,19 +49,29 @@ class ButtonView: UIView {
     private let delta = 1.0
 
     override func layoutSubviews() {
-        let w = frame.size.width
-        let h = 50.0
-        frame.size.height = h
-        backgroundColor = .green
-        button.frame = CGRect(x: delta, y: delta, width: w - 2 * delta, height: h - 2 * delta)
-        button.backgroundColor = .white
-        button.setTitleColor(.systemBlue,
-                             for: .normal)
-        button.setTitle("Test", for: .normal)
-        button.addTarget(self,
-                         action: #selector(buttonAction),
-                         for: .touchUpInside)
-        addSubview(button)
+        if (!isSetuped)
+        {
+            let w = frame.size.width
+            let h = 50.0
+            updateRadius(radius)
+            frame.size.height = h
+            backgroundColor = .green
+            button.frame = CGRect(x: delta, y: delta, width: w - 2 * delta, height: h - 2 * delta)
+            button.backgroundColor = .white
+            button.setTitleColor(.systemBlue,
+                                 for: .normal)
+            button.setTitle("Test", for: .normal)
+            button.addTarget(self,
+                             action: #selector(buttonAction),
+                             for: .touchUpInside)
+            addSubview(button)
+            isSetuped = true
+        }
+        else {
+            updateRadius(radius)
+            updateWidth(width)
+            updateColor(edgeColor)
+        }
     }
     
     @objc
