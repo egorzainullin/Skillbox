@@ -15,8 +15,7 @@
 		4B7EA3C52786D4A1001F2C0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B7EA3C32786D4A1001F2C0D /* LaunchScreen.storyboard */; };
 		4B7EA3CF2786D4FD001F2C0D /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7EA3CE2786D4FD001F2C0D /* ButtonView.swift */; };
 		4B7EA3D3278820E6001F2C0D /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7EA3D2278820E6001F2C0D /* ClockView.swift */; };
-		4B7EA3D727887F4F001F2C0D /* CustomSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7EA3D627887F4F001F2C0D /* CustomSegmentControl.swift */; };
-		4B7EA3D927888494001F2C0D /* CustomSegmentControl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B7EA3D827888494001F2C0D /* CustomSegmentControl.storyboard */; };
+		4B7EA3D727887F4F001F2C0D /* CustomSegmentControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7EA3D627887F4F001F2C0D /* CustomSegmentControlView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +29,7 @@
 		4B7EA3C62786D4A1001F2C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B7EA3CE2786D4FD001F2C0D /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		4B7EA3D2278820E6001F2C0D /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
-		4B7EA3D627887F4F001F2C0D /* CustomSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentControl.swift; sourceTree = "<group>"; };
-		4B7EA3D827888494001F2C0D /* CustomSegmentControl.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomSegmentControl.storyboard; sourceTree = "<group>"; };
+		4B7EA3D627887F4F001F2C0D /* CustomSegmentControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentControlView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +65,8 @@
 				4B7EA3B82786D4A0001F2C0D /* AppDelegate.swift */,
 				4B7EA3BA2786D4A0001F2C0D /* SceneDelegate.swift */,
 				4B7EA3BC2786D4A0001F2C0D /* ViewController.swift */,
-				4B7EA3D827888494001F2C0D /* CustomSegmentControl.storyboard */,
 				4B7EA3BE2786D4A0001F2C0D /* Main.storyboard */,
-				4B7EA3D627887F4F001F2C0D /* CustomSegmentControl.swift */,
+				4B7EA3D627887F4F001F2C0D /* CustomSegmentControlView.swift */,
 				4B7EA3CE2786D4FD001F2C0D /* ButtonView.swift */,
 				4B7EA3D2278820E6001F2C0D /* ClockView.swift */,
 				4B7EA3C12786D4A1001F2C0D /* Assets.xcassets */,
@@ -138,7 +135,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B7EA3C52786D4A1001F2C0D /* LaunchScreen.storyboard in Resources */,
-				4B7EA3D927888494001F2C0D /* CustomSegmentControl.storyboard in Resources */,
 				4B7EA3C22786D4A1001F2C0D /* Assets.xcassets in Resources */,
 				4B7EA3C02786D4A0001F2C0D /* Main.storyboard in Resources */,
 			);
@@ -151,7 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B7EA3D727887F4F001F2C0D /* CustomSegmentControl.swift in Sources */,
+				4B7EA3D727887F4F001F2C0D /* CustomSegmentControlView.swift in Sources */,
 				4B7EA3BD2786D4A0001F2C0D /* ViewController.swift in Sources */,
 				4B7EA3D3278820E6001F2C0D /* ClockView.swift in Sources */,
 				4B7EA3B92786D4A0001F2C0D /* AppDelegate.swift in Sources */,
