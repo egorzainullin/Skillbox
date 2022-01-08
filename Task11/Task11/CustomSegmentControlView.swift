@@ -8,9 +8,9 @@
 import UIKit
 
 protocol CustomSegmentControlDelegate: NSObjectProtocol {
-    func leftButtonPressed(_ segmentControl: CustomSegmentControl)
+    func leftButtonSelected(_ segmentControl: CustomSegmentControl)
 
-    func rightButtonPressed(_ segmentControl: CustomSegmentControl)
+    func rightButtonSelected(_ segmentControl: CustomSegmentControl)
 }
 
 @IBDesignable
@@ -99,29 +99,38 @@ class CustomSegmentControl: UIView {
         return button
     }
     
+    private var isLeftSelected = true
+    
     @objc
     private func leftButtonClicked(_ sender: UIButton!) {
-        leftButton.layer.backgroundColor = UIColor.clear.cgColor
-        UIView.animate(withDuration: 0.5, animations: {
-            self.leftButton.backgroundColor = self.notSelectedButtonColor
-        })
-        rightButton.layer.backgroundColor = UIColor.clear.cgColor
-        UIView.animate(withDuration: 0.5, animations: {
-            self.rightButton.backgroundColor = self.selectedButtonColor
-        })
-        delegate?.leftButtonPressed(self)
+        if (!isLeftSelected){
+            leftButton.layer.backgroundColor = UIColor.clear.cgColor
+            UIView.animate(withDuration: 0.5, animations: {
+                self.leftButton.backgroundColor = self.selectedButtonColor
+            })
+            rightButton.layer.backgroundColor = UIColor.clear.cgColor
+            UIView.animate(withDuration: 0.5, animations: {
+                self.rightButton.backgroundColor = self.notSelectedButtonColor
+            })
+            isLeftSelected = true
+            delegate?.leftButtonSelected(self)
+        }
     }
     
     @objc
     private func rightButtonClicked(_ sender: UIButton!) {
-        leftButton.layer.backgroundColor = UIColor.clear.cgColor
-        UIView.animate(withDuration: 0.5, animations: {
-            self.leftButton.backgroundColor = .systemGray5
-        })
-        rightButton.layer.backgroundColor = UIColor.clear.cgColor
-        UIView.animate(withDuration: 0.5, animations: {
-            self.rightButton.backgroundColor = .white
-        })
-        delegate?.rightButtonPressed(self)
+        if isLeftSelected
+        {
+            leftButton.layer.backgroundColor = UIColor.clear.cgColor
+            UIView.animate(withDuration: 0.5, animations: {
+                self.leftButton.backgroundColor = self.notSelectedButtonColor
+            })
+            rightButton.layer.backgroundColor = UIColor.clear.cgColor
+            UIView.animate(withDuration: 0.5, animations: {
+                self.rightButton.backgroundColor = self.selectedButtonColor
+            })
+                isLeftSelected = false
+            delegate?.rightButtonSelected(self)
+        }
     }
 }

@@ -18,11 +18,11 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: CustomSegmentControlDelegate {
-    func leftButtonPressed(_ segmentControl: CustomSegmentControl) {
+    func leftButtonSelected(_ segmentControl: CustomSegmentControl) {
         print("left button pressed")
     }
     
-    func rightButtonPressed(_ segmentControl: CustomSegmentControl) {
+    func rightButtonSelected(_ segmentControl: CustomSegmentControl) {
         print("right button pressed")
     }
     
