@@ -40,7 +40,10 @@ class ClockView: UIView {
         super.layoutSubviews()
         
         let w = frame.size.width
+        frame.size.height = w
         let h = frame.size.height
+        
+        backgroundColor = .systemGray6
         
         topMarker.frame = CGRect(x: w / 2 - markerSize / 2, y: 0, width: markerSize, height: markerLength)
         bottomMarker.frame = CGRect(x: w / 2 - markerSize / 2, y: h - markerLength, width: markerSize, height: markerLength)

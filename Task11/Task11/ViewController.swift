@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        customSegmentControl.delegate = self
+        customSegmentControl?.delegate = self
     }
 }
 

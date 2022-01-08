@@ -13,7 +13,7 @@ protocol CustomSegmentControlDelegate: NSObjectProtocol {
     func rightButtonSelected(_ segmentControl: CustomSegmentControl)
 }
 
-@IBDesignable
+//@IBDesignable
 class CustomSegmentControl: UIView {
     @IBInspectable var leftTitle = "Left"
     { didSet { updateLeftTitle(leftTitle)} }
