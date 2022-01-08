@@ -16,12 +16,16 @@ protocol CustomSegmentControlDelegate: NSObjectProtocol {
 @IBDesignable
 class CustomSegmentControl: UIView {
     @IBInspectable var leftTitle = "Left"
+    { didSet { updateLeftTitle(leftTitle)} }
     
     @IBInspectable var rightTitle = "Right"
+    { didSet { updateRightTitle(rightTitle)} }
     
     @IBInspectable var borderColor = UIColor.green
+    { didSet { updateBorderColor(borderColor)} }
     
     @IBInspectable var selectedButtonColor = UIColor.white
+    { didSet { updateButtonColor(selectedButtonColor) } }
     
     weak var delegate: CustomSegmentControlDelegate?
     
@@ -55,10 +59,32 @@ class CustomSegmentControl: UIView {
             rightButton.frame = CGRect(x: frameWidth / 2, y: frameHeight / 2, width: frameWidth / 2, height: frameHeight)
             leftButton.backgroundColor = selectedButtonColor
             addSubview(rightButton)
-        }
-        else {
             isSetuped = true
         }
+        else {
+            updateLeftTitle(leftTitle)
+            updateRightTitle(rightTitle)
+            updateBorderColor(borderColor)
+            updateButtonColor(selectedButtonColor)
+        }
+    }
+    
+    private func updateLeftTitle(_ title: String) {
+        leftButton.setTitle(title, for: .normal)
+    }
+    
+    private func updateRightTitle(_ title: String) {
+        rightButton.setTitle(title, for: .normal)
+    }
+    
+    private func updateBorderColor(_ color: UIColor) {
+        leftButton.layer.borderColor = color.cgColor
+        rightButton.layer.borderColor = color.cgColor
+    }
+    
+    private func updateButtonColor(_ color: UIColor) {
+        leftButton.backgroundColor = color
+        rightButton.backgroundColor = color
     }
     
     private func createButton(title: String) -> UIButton {
