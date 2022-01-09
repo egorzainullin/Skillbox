@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		4B698F41278B28DF00AE065D /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B698F40278B28DF00AE065D /* CharacterViewController.swift */; };
 		4B698F43278B29C900AE065D /* CharacterableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B698F42278B29C900AE065D /* CharacterableViewCell.swift */; };
-		4B7EA3FA278B1DA1001F2C0D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9E92B7278B1B1C0023F49C /* Alamofire.framework */; platformFilter = ios; };
-		4B7EA3FB278B1DA1001F2C0D /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9E92B7278B1B1C0023F49C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4B9E92A2278B18C60023F49C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9E92A1278B18C60023F49C /* AppDelegate.swift */; };
 		4B9E92A4278B18C60023F49C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9E92A3278B18C60023F49C /* SceneDelegate.swift */; };
 		4B9E92A6278B18C60023F49C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9E92A5278B18C60023F49C /* ViewController.swift */; };
@@ -18,20 +16,6 @@
 		4B9E92AB278B18C70023F49C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B9E92AA278B18C70023F49C /* Assets.xcassets */; };
 		4B9E92AE278B18C70023F49C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9E92AC278B18C70023F49C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		4B7EA3FC278B1DA1001F2C0D /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				4B7EA3FB278B1DA1001F2C0D /* Alamofire.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4B698F40278B28DF00AE065D /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +37,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B7EA3FA278B1DA1001F2C0D /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +95,6 @@
 				4B9E929A278B18C60023F49C /* Sources */,
 				4B9E929B278B18C60023F49C /* Frameworks */,
 				4B9E929C278B18C60023F49C /* Resources */,
-				4B7EA3FC278B1DA1001F2C0D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
