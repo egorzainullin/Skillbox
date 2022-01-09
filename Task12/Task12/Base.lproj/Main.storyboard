@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wNZ-8r-pOG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wNZ-8r-pOG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -106,10 +106,10 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kEj-a0-XFr">
-                                        <rect key="frame" x="105" y="185" width="110" height="200"/>
+                                        <rect key="frame" x="105" y="185" width="414" height="200"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morty Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuE-rD-FZn">
-                                                <rect key="frame" x="0.0" y="0.0" width="110" height="200"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -149,7 +149,7 @@
                                     <constraint firstItem="kEj-a0-XFr" firstAttribute="bottom" secondItem="zgD-IL-m1V" secondAttribute="bottom" constant="385" id="ERG-B9-sNK"/>
                                     <constraint firstItem="HHU-XD-P46" firstAttribute="trailing" secondItem="vjx-oO-Rd4" secondAttribute="trailing" id="Ijc-o6-bMz"/>
                                     <constraint firstItem="HHU-XD-P46" firstAttribute="trailing" secondItem="rdd-dU-gLJ" secondAttribute="trailing" id="MsM-x4-AxN"/>
-                                    <constraint firstItem="kEj-a0-XFr" firstAttribute="width" secondItem="HHU-XD-P46" secondAttribute="width" multiplier="0.2657" id="S1y-Bl-svS"/>
+                                    <constraint firstItem="kEj-a0-XFr" firstAttribute="width" secondItem="HHU-XD-P46" secondAttribute="width" id="S1y-Bl-svS"/>
                                     <constraint firstItem="kEj-a0-XFr" firstAttribute="top" secondItem="rdd-dU-gLJ" secondAttribute="bottom" id="T8M-tW-EZC"/>
                                     <constraint firstItem="kEj-a0-XFr" firstAttribute="trailing" secondItem="zgD-IL-m1V" secondAttribute="trailing" constant="215" id="UWX-Lg-pYi"/>
                                     <constraint firstItem="Fjk-Qs-GnZ" firstAttribute="top" secondItem="vjx-oO-Rd4" secondAttribute="bottom" id="VYm-fg-3yi"/>
