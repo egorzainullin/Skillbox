@@ -13,7 +13,23 @@
 		4B9E92A9278B18C60023F49C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9E92A7278B18C60023F49C /* Main.storyboard */; };
 		4B9E92AB278B18C70023F49C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B9E92AA278B18C70023F49C /* Assets.xcassets */; };
 		4B9E92AE278B18C70023F49C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9E92AC278B18C70023F49C /* LaunchScreen.storyboard */; };
+		4B9E92B8278B1B1C0023F49C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9E92B7278B1B1C0023F49C /* Alamofire.framework */; platformFilter = ios; };
+		4B9E92B9278B1B1C0023F49C /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9E92B7278B1B1C0023F49C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4B9E92BA278B1B1C0023F49C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4B9E92B9278B1B1C0023F49C /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4B9E929E278B18C60023F49C /* Task12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Task12.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +40,8 @@
 		4B9E92AA278B18C70023F49C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B9E92AD278B18C70023F49C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B9E92AF278B18C70023F49C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B9E92B5278B1A4F0023F49C /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
+		4B9E92B7278B1B1C0023F49C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Build/Alamofire.xcframework/ios-arm64_i386_x86_64-simulator/Alamofire.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B9E92B8278B1B1C0023F49C /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +61,7 @@
 			children = (
 				4B9E92A0278B18C60023F49C /* Task12 */,
 				4B9E929F278B18C60023F49C /* Products */,
+				4B9E92B6278B1B1C0023F49C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +76,7 @@
 		4B9E92A0278B18C60023F49C /* Task12 */ = {
 			isa = PBXGroup;
 			children = (
+				4B9E92B5278B1A4F0023F49C /* Cartfile */,
 				4B9E92A1278B18C60023F49C /* AppDelegate.swift */,
 				4B9E92A3278B18C60023F49C /* SceneDelegate.swift */,
 				4B9E92A5278B18C60023F49C /* ViewController.swift */,
@@ -65,6 +86,14 @@
 				4B9E92AF278B18C70023F49C /* Info.plist */,
 			);
 			path = Task12;
+			sourceTree = "<group>";
+		};
+		4B9E92B6278B1B1C0023F49C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B9E92B7278B1B1C0023F49C /* Alamofire.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +106,7 @@
 				4B9E929A278B18C60023F49C /* Sources */,
 				4B9E929B278B18C60023F49C /* Frameworks */,
 				4B9E929C278B18C60023F49C /* Resources */,
+				4B9E92BA278B1B1C0023F49C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -290,6 +320,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 83RWD64KH8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Alamofire.xcframework/ios-arm64_i386_x86_64-simulator",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Task12/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -318,6 +352,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 83RWD64KH8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Alamofire.xcframework/ios-arm64_i386_x86_64-simulator",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Task12/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
