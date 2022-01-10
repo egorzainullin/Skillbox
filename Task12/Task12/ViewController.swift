@@ -25,8 +25,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterTableViewCell") as! CharacterTableViewCell
-        cell.nameLabel.text = characters[indexPath.row].name
-        cell.characterImageView.image = UIImage(named: "moon")
+        
         return cell
     }
 }
