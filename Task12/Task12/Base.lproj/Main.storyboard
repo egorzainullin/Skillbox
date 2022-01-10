@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="265" id="cJ7-6Y-A8L">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterTableViewCell" rowHeight="265" id="cJ7-6Y-A8L" customClass="CharacterableViewCell" customModule="Task12" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="265"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cJ7-6Y-A8L" id="ojc-7G-sbF">
@@ -81,6 +81,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="characterImageView" destination="0Pj-mR-O9h" id="5Pp-Us-P4b"/>
+                                            <outlet property="lastKnownLocationLabel" destination="zUe-Qu-7WD" id="RoV-wq-tBN"/>
+                                            <outlet property="liveAndRaceLabel" destination="SLV-Fn-C3p" id="JDS-st-QKI"/>
+                                            <outlet property="nameLabel" destination="t2S-qM-OX2" id="90A-Pz-1Xu"/>
+                                            <outlet property="planelLabel" destination="zNM-na-Ng5" id="VGQ-zO-3r5"/>
                                             <segue destination="Azz-B4-ACi" kind="show" id="BcG-Ey-s5N"/>
                                         </connections>
                                     </tableViewCell>

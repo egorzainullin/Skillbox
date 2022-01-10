@@ -7,8 +7,18 @@
 
 import UIKit
 
-class CharacterableViewCell: UITableViewCell {
+class CharacterTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var characterImageView: UIImageView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var liveAndRaceLabel: UILabel!
+    
+    @IBOutlet weak var planelLabel: UILabel!
+    
+    @IBOutlet weak var lastKnownLocationLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
