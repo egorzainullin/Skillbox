@@ -43,6 +43,8 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterTableViewCell") as! CharacterTableViewCell
+        let i = indexPath.row
+        cell.nameLabel.text = characters[i].name
         return cell
     }
     

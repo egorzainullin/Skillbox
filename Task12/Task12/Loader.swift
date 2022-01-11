@@ -14,6 +14,7 @@ class Loader {
         AF.request(urlLink).responseDecodable(of: Page.self) { response in
             if let data = response.value {
                 debugPrint(data)
+                completion(data.results)
             }
             else {
                 debugPrint("error")
