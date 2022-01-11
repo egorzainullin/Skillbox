@@ -8,7 +8,7 @@
 import Foundation
 
 struct Character: Decodable {
-    var id: String
+    var id: Int
     
     var name: String
 
@@ -20,15 +20,13 @@ struct Character: Decodable {
 
     var gender: String = ""
 
-    var origin: String = ""
-
-    var location: String = ""
+    var location: Location
 
     var image: String = ""
 
     var episode: [String] = []
 
-    var url = ""
+    var url: String = ""
 
-    var created = ""
+    var created: String = ""
 }

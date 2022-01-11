@@ -8,9 +8,9 @@
 import Foundation
 
 struct Info: Decodable {
-    var count: String
+    var count: Int
     
-    var pages: String
+    var pages: Int
     
     var next: String?
 
@@ -23,7 +23,7 @@ struct Results: Decodable {
 
 struct Page: Decodable {
     var info: Info
-    var results: [Results]
+    var results: [Character]
     // мой вариант такой был var results: [Character]
 }
 
