@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Info: Decodable {
+struct Info: Decodable {
     var count: String
     
     var pages: String
@@ -17,9 +17,13 @@ class Info: Decodable {
     var prev: String?
 }
 
+struct Results: Decodable {
+    var id: Int
+}
 
-class Page: Decodable {
+struct Page: Decodable {
     var info: Info
-//    var results how to decode ????
+    var results: [Results]
+    // мой вариант такой был var results: [Character]
 }
 
