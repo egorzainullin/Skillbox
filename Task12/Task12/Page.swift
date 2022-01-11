@@ -17,6 +17,6 @@ class Results: Decodable {
 
 class Page: Decodable {
     var info: Info
-    var results: [Character]
+    var results: Results
 }
 
