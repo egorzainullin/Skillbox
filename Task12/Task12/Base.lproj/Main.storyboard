@@ -81,6 +81,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="characterImageView" destination="0Pj-mR-O9h" id="aH4-wd-efV"/>
+                                            <outlet property="lastKnonwLocationLabel" destination="zUe-Qu-7WD" id="YEm-I2-ZGT"/>
+                                            <outlet property="nameLabel" destination="t2S-qM-OX2" id="s8M-pW-l86"/>
+                                            <outlet property="planetLabel" destination="zNM-na-Ng5" id="XMc-4K-dd9"/>
+                                            <outlet property="statusLabel" destination="SLV-Fn-C3p" id="faE-Dl-0xT"/>
                                             <segue destination="Azz-B4-ACi" kind="show" id="BcG-Ey-s5N"/>
                                         </connections>
                                     </tableViewCell>
@@ -95,15 +100,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="qcU-Hg-KGb"/>
+                    <connections>
+                        <outlet property="tableView" destination="0vc-86-XY1" id="JCk-Xg-g9a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="69.642857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Character View Controller-->
         <scene sceneID="uNf-dm-syE">
             <objects>
-                <viewController id="Azz-B4-ACi" customClass="ViewController" customModule="Task12" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Azz-B4-ACi" customClass="CharacterViewController" customModule="Task12" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hSz-Nr-2dP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,7 +152,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episodes List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fA4-ag-uZX">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episodes List" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fA4-ag-uZX">
                                         <rect key="frame" x="0.0" y="426" width="414" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -187,10 +195,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aAg-ce-Hzx"/>
+                    <connections>
+                        <outlet property="characterImageView" destination="rdd-dU-gLJ" id="RFg-yM-kyQ"/>
+                        <outlet property="episodesList" destination="fA4-ag-uZX" id="xbL-fT-MAy"/>
+                        <outlet property="nameLabel" destination="CuE-rD-FZn" id="GKI-cu-QEG"/>
+                        <outlet property="planetLabel" destination="Fjk-Qs-GnZ" id="lp2-Wy-CxM"/>
+                        <outlet property="raceLabel" destination="vjx-oO-Rd4" id="RyY-eW-iet"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OpH-UX-nRy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1777" y="70"/>
+            <point key="canvasLocation" x="1776.8115942028987" y="69.642857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TPX-Dw-R9Z">

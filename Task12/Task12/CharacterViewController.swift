@@ -9,12 +9,22 @@ import UIKit
 
 class CharacterViewController: UIViewController {
 
-    var id: Int?
+    var character: Character?
+    
+    @IBOutlet weak var characterImageView: UIImageView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var raceLabel: UILabel!
+    
+    @IBOutlet weak var planetLabel: UILabel!
+    
+    @IBOutlet weak var episodesList: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        nameLabel.text = character?.name
     }
     
 

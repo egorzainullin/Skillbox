@@ -6,15 +6,34 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
     
-    private var characters: [Character] = [
-        Character(name:"Rick Sanchez", imageSource: "moon")]
+    private var characters: [Character] = []
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    private var rowNumber: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        Loader.loadCharacters(completion: { characters in
+            self.characters = characters
+            self.tableView.reloadData()
+            
+        })
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? CharacterViewController {
+            vc.character = characters[rowNumber]
+            vc.character?.name = "not Morty Smith"
+        }
     }
 }
 
@@ -25,8 +44,12 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterTableViewCell") as! CharacterTableViewCell
-        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        rowNumber = indexPath.row
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

@@ -8,8 +8,17 @@
 import UIKit
 
 class CharacterTableViewCell: UITableViewCell {
-
     
+    @IBOutlet weak var characterImageView: UIImageView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var statusLabel: UILabel!
+    
+    
+    @IBOutlet weak var planetLabel: UILabel!
+    
+    @IBOutlet weak var lastKnonwLocationLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

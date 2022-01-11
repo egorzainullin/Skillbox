@@ -7,8 +7,28 @@
 
 import Foundation
 
-struct Character {
+struct Character: Decodable {
+    var id: String
+    
     var name: String = ""
     
-    var imageSource = ""
+    var status: String = ""
+    
+    var species: String = ""
+    
+    var type: String = ""
+    
+    var gender: String = ""
+    
+    var origin: String = ""
+    
+    var location: String = ""
+    
+    var image: String = ""
+    
+    var episode: [String] = []
+    
+    var url = ""
+    
+    var created = ""
 }
