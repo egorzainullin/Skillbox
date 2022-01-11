@@ -32,7 +32,6 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? CharacterViewController {
             vc.character = characters[rowNumber]
-            vc.character?.name = "not Morty Smith"
         }
     }
 }

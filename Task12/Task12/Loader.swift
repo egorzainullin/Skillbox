@@ -13,8 +13,7 @@ class Loader {
         let urlLink = "https://rickandmortyapi.com/api/character"
         AF.request(urlLink).responseDecodable(of: Page.self) { response in
             if let data = response.value {
-                var characters = data.results
-                debugPrint(characters)
+                debugPrint(data)
             }
             else {
                 debugPrint("error")

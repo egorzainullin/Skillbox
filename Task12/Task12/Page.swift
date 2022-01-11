@@ -8,15 +8,18 @@
 import Foundation
 
 class Info: Decodable {
+    var count: String
     
+    var pages: String
+    
+    var next: String?
+
+    var prev: String?
 }
 
-class Results: Decodable {
-    var characters: [Character]
-}
 
 class Page: Decodable {
     var info: Info
-    var results: Results
+//    var results how to decode ????
 }
 
