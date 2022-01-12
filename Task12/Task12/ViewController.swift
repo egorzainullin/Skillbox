@@ -29,7 +29,6 @@ class ViewController: UIViewController {
         Loader.loadCharacters(completion: { characters in
             self.characters = characters
             self.tableView.reloadData()
-            
         })
             isAppeared = true
         }
@@ -65,8 +64,8 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        rowNumber = indexPath.row
         tableView.deselectRow(at: indexPath, animated: true)
-        rowNumber = indexPath.row // Вот тут хочу поменять row Number, но не получается
     }
 }
 
