@@ -86,7 +86,6 @@
                                             <outlet property="nameLabel" destination="t2S-qM-OX2" id="s8M-pW-l86"/>
                                             <outlet property="planetLabel" destination="zNM-na-Ng5" id="XMc-4K-dd9"/>
                                             <outlet property="statusLabel" destination="SLV-Fn-C3p" id="faE-Dl-0xT"/>
-                                            <segue destination="Azz-B4-ACi" kind="show" id="BcG-Ey-s5N"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -102,6 +101,7 @@
                     <navigationItem key="navigationItem" id="qcU-Hg-KGb"/>
                     <connections>
                         <outlet property="tableView" destination="0vc-86-XY1" id="JCk-Xg-g9a"/>
+                        <segue destination="Azz-B4-ACi" kind="show" identifier="toCharacterSegue" id="Uop-dD-vxt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

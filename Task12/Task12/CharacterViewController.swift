@@ -30,7 +30,7 @@ class CharacterViewController: UIViewController {
 
     override func viewWillLayoutSubviews(){
         super.viewWillLayoutSubviews()
-//        scrollView.contentSize = CGSize(width: view.frame.width, height: 2300) // Не знаю, как точно это сделать
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -52,7 +52,6 @@ class CharacterViewController: UIViewController {
                 Loader.loadEpisode(urlLink: episodeLink, completion: {episode in
                     let episodes = self.episodesList.text
                     if let episodes = episodes {
-                        debugPrint(episode)
                         self.episodesList.text = episodes + "\n" + episode
                     }
                 })

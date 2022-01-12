@@ -37,6 +37,8 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? CharacterViewController {
             vc.character = characters[rowNumber]
+            debugPrint("Prepare")
+            print(rowNumber)
         }
     }
 }
@@ -64,8 +66,10 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selected")
         rowNumber = indexPath.row
         tableView.deselectRow(at: indexPath, animated: true)
+        self.performSegue(withIdentifier: "toCharacterSegue", sender: self)
     }
 }
 
