@@ -13,11 +13,22 @@ class Loader {
         let urlLink = "https://rickandmortyapi.com/api/character"
         AF.request(urlLink).responseDecodable(of: Page.self) { response in
             if let data = response.value {
-                debugPrint(data)
                 completion(data.results)
             }
             else {
                 debugPrint("error")
+            }
+        }
+    }
+    
+    static func loadEpisode (urlLink: String, completion: @escaping (String) -> Void) {
+        AF.request(urlLink).responseDecodable(of: Episode.self) {
+            response in
+            if let data = response.value {
+                completion(data.name)
+            }
+            else {
+                debugPrint("error in loading episode")
             }
         }
     }

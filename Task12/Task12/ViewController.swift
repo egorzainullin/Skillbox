@@ -16,17 +16,23 @@ class ViewController: UIViewController {
     
     private var rowNumber: Int = 0
     
+    private var isAppeared = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if (!isAppeared) {
         Loader.loadCharacters(completion: { characters in
             self.characters = characters
             self.tableView.reloadData()
             
         })
+            isAppeared = true
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,12 +51,22 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterTableViewCell") as! CharacterTableViewCell
         let i = indexPath.row
         cell.nameLabel.text = characters[i].name
+        cell.statusLabel.text = characters[i].status + " - " + characters[i].species
+        cell.planetLabel.text = characters[i].origin.name
+        cell.lastKnownLocationLabel.text = characters[i].location.name
+        let url = URL(string: characters[i].image)
+        DispatchQueue.global().async {
+            let data = try? Data(contentsOf: url!)
+                DispatchQueue.main.async {
+                cell.characterImageView.image = UIImage(data: data!)
+            }
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        rowNumber = indexPath.row
         tableView.deselectRow(at: indexPath, animated: true)
+        rowNumber = indexPath.row // Вот тут хочу поменять row Number, но не получается
     }
 }
 

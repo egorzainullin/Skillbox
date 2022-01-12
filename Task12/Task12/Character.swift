@@ -12,21 +12,23 @@ struct Character: Decodable {
     
     var name: String
 
-    var status: String = ""
+    var status: String
 
-    var species: String = ""
+    var species: String
 
-    var type: String = ""
+    var type: String
 
-    var gender: String = ""
+    var gender: String
+    
+    var origin: Location
 
     var location: Location
 
-    var image: String = ""
+    var image: String
 
     var episode: [String] = []
 
-    var url: String = ""
+    var url: String
 
-    var created: String = ""
+    var created: String
 }

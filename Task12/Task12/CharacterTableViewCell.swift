@@ -18,7 +18,7 @@ class CharacterTableViewCell: UITableViewCell {
     
     @IBOutlet weak var planetLabel: UILabel!
     
-    @IBOutlet weak var lastKnonwLocationLabel: UILabel!
+    @IBOutlet weak var lastKnownLocationLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
