@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return characters.count
     }
@@ -68,8 +68,8 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("selected")
         rowNumber = indexPath.row
-        tableView.deselectRow(at: indexPath, animated: true)
         self.performSegue(withIdentifier: "toCharacterSegue", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
