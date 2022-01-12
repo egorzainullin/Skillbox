@@ -121,7 +121,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="kEj-a0-XFr">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="444"/>
+                                        <rect key="frame" x="0.0" y="177" width="414" height="444"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rdd-dU-gLJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="362"/>
@@ -154,8 +154,6 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="kEj-a0-XFr" firstAttribute="top" secondItem="HHU-XD-P46" secondAttribute="top" id="0Pi-ru-6bF"/>
-                                    <constraint firstItem="kEj-a0-XFr" firstAttribute="width" secondItem="HHU-XD-P46" secondAttribute="width" id="5Ix-1T-bhY"/>
                                     <constraint firstItem="kEj-a0-XFr" firstAttribute="leading" secondItem="zgD-IL-m1V" secondAttribute="leading" id="XWv-MJ-3Vo"/>
                                     <constraint firstItem="kEj-a0-XFr" firstAttribute="trailing" secondItem="HHU-XD-P46" secondAttribute="trailing" id="bxP-HH-3bN"/>
                                     <constraint firstItem="kEj-a0-XFr" firstAttribute="bottom" secondItem="zgD-IL-m1V" secondAttribute="bottom" constant="444" id="fat-TB-Q2q"/>
