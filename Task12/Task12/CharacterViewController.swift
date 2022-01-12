@@ -30,7 +30,7 @@ class CharacterViewController: UIViewController {
 
     override func viewWillLayoutSubviews(){
         super.viewWillLayoutSubviews()
-        scrollView.contentSize = CGSize(width: 375, height: 2300) // Не знаю, как точно это сделать
+//        scrollView.contentSize = CGSize(width: view.frame.width, height: 2300) // Не знаю, как точно это сделать
     }
     
     override func viewDidAppear(_ animated: Bool) {

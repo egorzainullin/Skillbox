@@ -121,7 +121,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="kEj-a0-XFr">
-                                        <rect key="frame" x="0.0" y="177" width="414" height="444"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="444"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rdd-dU-gLJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="362"/>
@@ -156,10 +156,10 @@
                                 <constraints>
                                     <constraint firstItem="kEj-a0-XFr" firstAttribute="leading" secondItem="zgD-IL-m1V" secondAttribute="leading" id="XWv-MJ-3Vo"/>
                                     <constraint firstItem="kEj-a0-XFr" firstAttribute="trailing" secondItem="HHU-XD-P46" secondAttribute="trailing" id="bxP-HH-3bN"/>
-                                    <constraint firstItem="kEj-a0-XFr" firstAttribute="bottom" secondItem="zgD-IL-m1V" secondAttribute="bottom" constant="444" id="fat-TB-Q2q"/>
-                                    <constraint firstItem="kEj-a0-XFr" firstAttribute="top" secondItem="zgD-IL-m1V" secondAttribute="top" constant="177" id="opL-PN-IdS"/>
+                                    <constraint firstItem="kEj-a0-XFr" firstAttribute="bottom" secondItem="zgD-IL-m1V" secondAttribute="bottom" id="fat-TB-Q2q"/>
+                                    <constraint firstItem="kEj-a0-XFr" firstAttribute="top" secondItem="zgD-IL-m1V" secondAttribute="top" id="opL-PN-IdS"/>
                                     <constraint firstItem="kEj-a0-XFr" firstAttribute="leading" secondItem="HHU-XD-P46" secondAttribute="leading" id="vxW-7J-NG6"/>
-                                    <constraint firstItem="kEj-a0-XFr" firstAttribute="trailing" secondItem="zgD-IL-m1V" secondAttribute="trailing" constant="414" id="wos-Yi-bvP"/>
+                                    <constraint firstItem="kEj-a0-XFr" firstAttribute="trailing" secondItem="zgD-IL-m1V" secondAttribute="trailing" id="wos-Yi-bvP"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="zgD-IL-m1V"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="HHU-XD-P46"/>
