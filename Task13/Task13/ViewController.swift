@@ -51,9 +51,12 @@ class ViewController: UIViewController {
     
     private func reset()
     {
+        self.view.layer.removeAllAnimations()
         topConstraint.constant = 30
         centerConstraint.constant = 0
         redSquareView.backgroundColor = .red
+        redSquareView.alpha = 1
+        self.redSquareView.transform = CGAffineTransform(rotationAngle: 0)
         view.layoutIfNeeded()
     }
     
@@ -96,6 +99,27 @@ class ViewController: UIViewController {
             self.reset()
         }
     }
+    
+    private func animateDisappearing() {
+        UIView.animate(withDuration: 2) {
+            self.redSquareView.alpha = 0
+        } completion: { isCompleted in
+            self.reset()
+        }
+    }
+    
+    private func animateDoubleSizeAndReverse() {
+        UIView.animate(withDuration: 2, delay: 0, options: .autoreverse) { [self] in
+            self.redSquareView.frame.size =
+            CGSize(width: getRedSquareWidth() * 2, height: getRedSquareWidth())
+        }
+    }
+    
+    private func animateInfiniteRotation() {
+        UIView.animate(withDuration: 0.8, delay: 0, options: [.repeat, .curveLinear]) {
+            self.redSquareView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        }
+    }
  
     private func animate(_ numberOfAnimation: Int) {
         reset()
@@ -109,6 +133,12 @@ class ViewController: UIViewController {
             animateIntoCircle()
         case 4:
             animateAnglePiRotation()
+        case 5:
+            animateDisappearing()
+        case 6:
+            animateDoubleSizeAndReverse()
+        case 7:
+            animateInfiniteRotation()
         default:
             debugPrint("Unknown number of animation")
         }
