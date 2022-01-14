@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     
     private func reset()
     {
-        self.view.layer.removeAllAnimations()
+        redSquareView.layer.removeAllAnimations()
         topConstraint.constant = 30
         centerConstraint.constant = 0
         redSquareView.backgroundColor = .red
