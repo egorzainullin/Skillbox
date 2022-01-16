@@ -18,6 +18,7 @@
 		4B5C119B2794121E007EC1D1 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5C11962794121E007EC1D1 /* ToDoTableViewCell.swift */; };
 		4B5C11A3279412D8007EC1D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5C11A2279412D8007EC1D1 /* ViewController.swift */; };
 		4B5C11A82794131A007EC1D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B5C11A72794131A007EC1D1 /* Main.storyboard */; };
+		4B6CB7A627942F7B00225677 /* ToDoCoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CB7A527942F7B00225677 /* ToDoCoreViewController.swift */; };
 		584AA7FDEAFFB9A4C43410A7 /* Pods_Task14.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90ABEA781100A51B98C77303 /* Pods_Task14.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		4B5C11962794121E007EC1D1 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 		4B5C11A2279412D8007EC1D1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4B5C11A72794131A007EC1D1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4B6CB7A527942F7B00225677 /* ToDoCoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCoreViewController.swift; sourceTree = "<group>"; };
 		6BAFA7B2FAB93A693C443F7A /* Pods-Task14.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task14.debug.xcconfig"; path = "Target Support Files/Pods-Task14/Pods-Task14.debug.xcconfig"; sourceTree = "<group>"; };
 		90ABEA781100A51B98C77303 /* Pods_Task14.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task14.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 				4B5C11942794121E007EC1D1 /* ToDoViewController.swift */,
 				4B5C117E2794118E007EC1D1 /* SceneDelegate.swift */,
 				4B5C11A2279412D8007EC1D1 /* ViewController.swift */,
+				4B6CB7A527942F7B00225677 /* ToDoCoreViewController.swift */,
 				4B5C118827941190007EC1D1 /* Assets.xcassets */,
 				4B5C11A72794131A007EC1D1 /* Main.storyboard */,
 				4B5C118A27941190007EC1D1 /* LaunchScreen.storyboard */,
@@ -95,7 +98,6 @@
 				6BAFA7B2FAB93A693C443F7A /* Pods-Task14.debug.xcconfig */,
 				1CBFE4B1F0B0FB4F9B306DC4 /* Pods-Task14.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,6 +230,7 @@
 				4B5C117F2794118E007EC1D1 /* SceneDelegate.swift in Sources */,
 				4B5C11982794121E007EC1D1 /* Persistance.swift in Sources */,
 				4B5C11992794121E007EC1D1 /* ToDoViewController.swift in Sources */,
+				4B6CB7A627942F7B00225677 /* ToDoCoreViewController.swift in Sources */,
 				4B5C11A3279412D8007EC1D1 /* ViewController.swift in Sources */,
 				4B5C11872794118E007EC1D1 /* Task14.xcdatamodeld in Sources */,
 			);

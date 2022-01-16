@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nCq-HW-meZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="deI-pN-0g7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -158,20 +158,66 @@
             </objects>
             <point key="canvasLocation" x="930" y="84"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="fy9-Jz-ee2">
+        <!--To Do Core Data View Controller-->
+        <scene sceneID="XdX-LV-Yvj">
             <objects>
-                <viewController id="JhU-sO-4ID" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VbX-Cp-q26">
+                <viewController id="deI-pN-0g7" customClass="ToDoCoreDataViewController" customModule="Task14" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ard-Tp-eVL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Sz3-Ic-LpX"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vv0-MM-mhW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="654.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="deI-pN-0g7" id="WRE-nL-HhF"/>
+                                    <outlet property="delegate" destination="deI-pN-0g7" id="pDu-YB-0ja"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LuR-ld-qlP">
+                                <rect key="frame" x="0.0" y="698.5" width="414" height="163.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EWX-fM-VfO">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="132.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOW-KV-oRK">
+                                        <rect key="frame" x="0.0" y="132.5" width="414" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Add Task"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oOW-KV-oRK" firstAttribute="leading" secondItem="LuR-ld-qlP" secondAttribute="leading" id="13G-61-Io7"/>
+                                    <constraint firstAttribute="trailing" secondItem="oOW-KV-oRK" secondAttribute="trailing" id="26c-0b-X2g"/>
+                                    <constraint firstAttribute="trailing" secondItem="EWX-fM-VfO" secondAttribute="trailing" id="41I-uR-yuU"/>
+                                    <constraint firstItem="oOW-KV-oRK" firstAttribute="top" secondItem="EWX-fM-VfO" secondAttribute="bottom" id="RWE-KH-HqL"/>
+                                    <constraint firstAttribute="bottom" secondItem="oOW-KV-oRK" secondAttribute="bottom" id="cV6-AU-yTc"/>
+                                    <constraint firstItem="oOW-KV-oRK" firstAttribute="top" secondItem="EWX-fM-VfO" secondAttribute="bottom" id="mii-zp-t8v"/>
+                                    <constraint firstItem="EWX-fM-VfO" firstAttribute="leading" secondItem="LuR-ld-qlP" secondAttribute="leading" id="pZJ-iG-xci"/>
+                                    <constraint firstItem="EWX-fM-VfO" firstAttribute="top" secondItem="LuR-ld-qlP" secondAttribute="top" id="zl6-za-lqM"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LD2-oG-PgL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LuR-ld-qlP" firstAttribute="leading" secondItem="LD2-oG-PgL" secondAttribute="leading" id="2yu-sx-Ewo"/>
+                            <constraint firstItem="LuR-ld-qlP" firstAttribute="top" secondItem="vv0-MM-mhW" secondAttribute="bottom" id="4Oo-4n-NUq"/>
+                            <constraint firstItem="vv0-MM-mhW" firstAttribute="leading" secondItem="LD2-oG-PgL" secondAttribute="leading" id="CCx-ET-4np"/>
+                            <constraint firstItem="vv0-MM-mhW" firstAttribute="top" secondItem="LD2-oG-PgL" secondAttribute="top" id="G0B-PF-RdO"/>
+                            <constraint firstItem="LuR-ld-qlP" firstAttribute="top" secondItem="vv0-MM-mhW" secondAttribute="bottom" id="Kcn-DM-Qj6"/>
+                            <constraint firstItem="LD2-oG-PgL" firstAttribute="bottom" secondItem="LuR-ld-qlP" secondAttribute="bottom" id="SwE-Mj-vYf"/>
+                            <constraint firstItem="LD2-oG-PgL" firstAttribute="trailing" secondItem="LuR-ld-qlP" secondAttribute="trailing" id="USU-L4-CFT"/>
+                            <constraint firstItem="vv0-MM-mhW" firstAttribute="height" secondItem="LD2-oG-PgL" secondAttribute="height" multiplier="0.8" id="gUF-mr-Idm"/>
+                            <constraint firstItem="LD2-oG-PgL" firstAttribute="trailing" secondItem="vv0-MM-mhW" secondAttribute="trailing" id="rqU-fM-VDM"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uCS-lD-Irs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JwM-qZ-HHx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1893" y="84"/>
+            <point key="canvasLocation" x="1804" y="84"/>
         </scene>
     </scenes>
     <resources>
