@@ -74,6 +74,63 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EA8-qE-m4k">
                                 <rect key="frame" x="0.0" y="44" width="414" height="654.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nCq-HW-meZ" id="jri-Af-nbi"/>
+                                    <outlet property="delegate" destination="nCq-HW-meZ" id="d2A-ew-Kcg"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="G7F-re-c23">
+                                <rect key="frame" x="20" y="698.5" width="374" height="163.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Neu-mA-vZj">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="132.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6B-gn-Yd0">
+                                        <rect key="frame" x="0.0" y="132.5" width="374" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Add task"/>
+                                        <connections>
+                                            <action selector="addTaskTouchUpInside:" destination="nCq-HW-meZ" eventType="touchUpInside" id="sOS-Os-jsh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8V4-B9-MZk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EA8-qE-m4k" firstAttribute="top" secondItem="8V4-B9-MZk" secondAttribute="top" id="4Ra-iZ-t9K"/>
+                            <constraint firstItem="EA8-qE-m4k" firstAttribute="height" secondItem="8V4-B9-MZk" secondAttribute="height" multiplier="0.8" id="5aH-nQ-vfh"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="G7F-re-c23" secondAttribute="bottom" id="Mhd-Ru-ACp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G7F-re-c23" secondAttribute="trailing" id="RMk-nT-naQ"/>
+                            <constraint firstItem="8V4-B9-MZk" firstAttribute="trailing" secondItem="EA8-qE-m4k" secondAttribute="trailing" id="YuB-9p-zlh"/>
+                            <constraint firstItem="G7F-re-c23" firstAttribute="top" secondItem="EA8-qE-m4k" secondAttribute="bottom" id="YxI-U4-fDx"/>
+                            <constraint firstItem="EA8-qE-m4k" firstAttribute="leading" secondItem="8V4-B9-MZk" secondAttribute="leading" id="ghH-O1-tSn"/>
+                            <constraint firstItem="G7F-re-c23" firstAttribute="leading" secondItem="fH1-b0-iyz" secondAttribute="leadingMargin" id="kpt-ct-uSj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="EA8-qE-m4k" id="fYX-aR-Kw1"/>
+                        <outlet property="textField" destination="Neu-mA-vZj" id="lEh-JT-mfx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dwb-bZ-dlt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="84"/>
+        </scene>
+        <!--To Do Core View Controller-->
+        <scene sceneID="XdX-LV-Yvj">
+            <objects>
+                <viewController id="deI-pN-0g7" customClass="ToDoCoreViewController" customModule="Task14" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ard-Tp-eVL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vv0-MM-mhW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="654.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ToDoTableViewCell" id="Xl0-z4-rKW" customClass="ToDoTableViewCell" customModule="Task14" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
@@ -113,59 +170,6 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="nCq-HW-meZ" id="jri-Af-nbi"/>
-                                    <outlet property="delegate" destination="nCq-HW-meZ" id="d2A-ew-Kcg"/>
-                                </connections>
-                            </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="G7F-re-c23">
-                                <rect key="frame" x="20" y="698.5" width="374" height="163.5"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Neu-mA-vZj">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="132.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6B-gn-Yd0">
-                                        <rect key="frame" x="0.0" y="132.5" width="374" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Add task"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="8V4-B9-MZk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="EA8-qE-m4k" firstAttribute="top" secondItem="8V4-B9-MZk" secondAttribute="top" id="4Ra-iZ-t9K"/>
-                            <constraint firstItem="EA8-qE-m4k" firstAttribute="height" secondItem="8V4-B9-MZk" secondAttribute="height" multiplier="0.8" id="5aH-nQ-vfh"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="G7F-re-c23" secondAttribute="bottom" id="Mhd-Ru-ACp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="G7F-re-c23" secondAttribute="trailing" id="RMk-nT-naQ"/>
-                            <constraint firstItem="8V4-B9-MZk" firstAttribute="trailing" secondItem="EA8-qE-m4k" secondAttribute="trailing" id="YuB-9p-zlh"/>
-                            <constraint firstItem="G7F-re-c23" firstAttribute="top" secondItem="EA8-qE-m4k" secondAttribute="bottom" id="YxI-U4-fDx"/>
-                            <constraint firstItem="EA8-qE-m4k" firstAttribute="leading" secondItem="8V4-B9-MZk" secondAttribute="leading" id="ghH-O1-tSn"/>
-                            <constraint firstItem="G7F-re-c23" firstAttribute="leading" secondItem="fH1-b0-iyz" secondAttribute="leadingMargin" id="kpt-ct-uSj"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="EA8-qE-m4k" id="fYX-aR-Kw1"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dwb-bZ-dlt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="930" y="84"/>
-        </scene>
-        <!--To Do Core View Controller-->
-        <scene sceneID="XdX-LV-Yvj">
-            <objects>
-                <viewController id="deI-pN-0g7" customClass="ToDoCoreViewController" customModule="Task14" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ard-Tp-eVL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vv0-MM-mhW">
-                                <rect key="frame" x="0.0" y="44" width="414" height="654.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <connections>
                                     <outlet property="dataSource" destination="deI-pN-0g7" id="WRE-nL-HhF"/>
                                     <outlet property="delegate" destination="deI-pN-0g7" id="pDu-YB-0ja"/>
                                 </connections>
@@ -182,6 +186,9 @@
                                         <rect key="frame" x="0.0" y="132.5" width="414" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Add Task"/>
+                                        <connections>
+                                            <action selector="addTaskTouchUpInside:" destination="deI-pN-0g7" eventType="touchUpInside" id="azC-GS-lpE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -210,6 +217,10 @@
                             <constraint firstItem="LD2-oG-PgL" firstAttribute="trailing" secondItem="vv0-MM-mhW" secondAttribute="trailing" id="rqU-fM-VDM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="vv0-MM-mhW" id="o2o-fj-NyQ"/>
+                        <outlet property="textField" destination="EWX-fM-VfO" id="XeY-ks-fr5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JwM-qZ-HHx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
