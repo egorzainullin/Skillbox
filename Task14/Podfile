@@ -7,5 +7,5 @@ target 'Task14' do
 
   # Pods for Task14
   pod 'RealmSwift'
-
+  pod 'Alamofire'
 end
