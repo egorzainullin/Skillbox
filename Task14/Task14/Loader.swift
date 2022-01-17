@@ -10,9 +10,8 @@ import Alamofire
 
 class Loader {
     static func LoadTodayWeather(completion: @escaping ([DayResponse]) -> Void) {
-        let token = "7919aa47590713addd9411706f86b5d1"
-        let cityName = "London"
-        let link = "api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=\(token)"
+        let token = ""
+        let link = "https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,minutely,alerts&appid=\(token)"
         let request = AF.request(link)
         debugPrint(request.response)
         AF.request(link).responseDecodable(of: Result.self) { response in
