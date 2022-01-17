@@ -13,16 +13,16 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     
+    let shared = Persistence.shared
+    
     @IBAction func buttonTouchUpInside(_ sender: Any) {
-        let shared = Persistence.shared
+        
         shared.name = nameTextField.text ?? ""
         shared.sursname = sursnameTextField.text ?? ""
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let shared = Persistence.shared
         sursnameTextField.text = shared.sursname
         nameTextField.text = shared.name
     }
