@@ -13,16 +13,16 @@ class Loader {
         let token = ""
         let link = "https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,minutely,alerts&appid=\(token)"
         let request = AF.request(link)
-        debugPrint(request.response)
-        AF.request(link).responseDecodable(of: Result.self) { response in
-            if let data = response.value {
-                debugPrint(data)
-                // TODO: edit and add
-                completion(data.list)
-            }
-            else {
-                debugPrint("error")
-            }
-        }
+        debugPrint(request.response) // почему response nil
+//        AF.request(link).responseDecodable(of: Result.self) { response in
+//            if let data = response.value {
+//                debugPrint(data)
+//                // TODO: edit and add
+//                completion(data.list)
+//            }
+//            else {
+//                debugPrint("error")
+//            }
+//        }
     }
 }
