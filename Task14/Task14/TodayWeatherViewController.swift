@@ -16,9 +16,9 @@ class WeatherDesription: Object, Decodable {
     @Persisted var main: String = ""
 }
 
-class DayResponse: Decodable {
-    var main: Weather
-    var weather: WeatherDesription
+class DayResponse: Object, Decodable {
+    @Persisted var main: Weather
+    @Persisted var weather: WeatherDesription
 }
 
 class Result: Decodable {
