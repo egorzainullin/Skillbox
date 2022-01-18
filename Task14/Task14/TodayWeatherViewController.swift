@@ -16,6 +16,18 @@ class WeatherDesription: Object, Decodable {
     @Persisted var main: String = ""
 }
 
+class DayWeather {
+    var weather: Weather
+    
+    var weatherDescription: WeatherDesription
+    
+    init(weather: Weather, weatherDescription: WeatherDesription)
+    {
+        self.weather = weather
+        self.weatherDescription = weatherDescription
+    }
+}
+
 class DayResponse: Decodable {
     var main: Weather
     var weather: WeatherDesription
@@ -27,7 +39,7 @@ class Result: Decodable {
 
 class TodayWeatherViewController: UIViewController {
     
-    var weatherArray: [DayResponse] = []
+    var weatherArray: [DayWeather] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +50,14 @@ class TodayWeatherViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Loader.LoadTodayWeather(completion: { daysForecst
+        Loader.LoadTodayWeather { daysForecast
             in
-            self.weatherArray = daysForecst
-        })
+            self.weatherArray = []
+            for dayForecast in daysForecast {
+                let dayWeather = DayWeather(weather: dayForecast.main, weatherDescription: dayForecast.weather)
+                self.weatherArray.append(dayWeather)
+            }
+        }
     }
   
 }
