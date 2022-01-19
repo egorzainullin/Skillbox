@@ -9,17 +9,17 @@ import UIKit
 import RealmSwift
 
 class Weather: Decodable {
-    @Persisted var temp: Double = 273
+    var temp: Double = 273
 }
 
-class WeatherDesription: Decodable {
-    @Persisted var main: String = ""
+class WeatherDescription: Decodable {
+    var main: String = ""
 }
 
 class DayWeather {
     var temperature: Double
     
-    var description: MTLAccelerationStructureTriangleGeometryDescriptor
+    var description: String
     
     init(temp: Double, weatherDescription: String)
     {
@@ -30,7 +30,8 @@ class DayWeather {
 
 class DayResponse: Decodable {
     var main: Weather
-    var weather: WeatherDesription
+    var weather: [WeatherDescription]
+    var order: Int
 }
 
 class Result: Decodable {
@@ -55,7 +56,7 @@ class TodayWeatherViewController: UIViewController {
             self.weatherArray = []
             debugPrint(daysForecast[0].main.temp)
             for dayForecast in daysForecast {
-                let dayWeather = DayWeather(temp: dayForecast.main.temp, weatherDescription: dayForecast.weather.main)
+                let dayWeather = DayWeather(temp: dayForecast.main.temp, weatherDescription: dayForecast.weather[0].main)
                 self.weatherArray.append(dayWeather)
             }
         }
