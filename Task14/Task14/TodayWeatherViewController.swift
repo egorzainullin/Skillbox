@@ -21,6 +21,8 @@ class DayWeather {
     
     var description: String
     
+    var order = 0
+    
     init(temp: Double, weatherDescription: String)
     {
         self.temperature = temp
@@ -31,7 +33,6 @@ class DayWeather {
 class DayResponse: Decodable {
     var main: Weather
     var weather: [WeatherDescription]
-    var order: Int
 }
 
 class Result: Decodable {
