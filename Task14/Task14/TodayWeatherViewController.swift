@@ -63,12 +63,11 @@ class TodayWeatherViewController: UIViewController {
         Loader.LoadWeather { daysForecast
             in
             self.weatherArray = []
-            debugPrint(daysForecast[0].main.temp)
             for dayForecast in daysForecast {
                 let dayWeather = DayWeather(temp: dayForecast.main.temp, weatherDescription: dayForecast.weather[0].main)
                 self.weatherArray.append(dayWeather)
-                self.updateWeather()
             }
+            self.updateWeather()
         }
     }
     
