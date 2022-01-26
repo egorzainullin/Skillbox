@@ -16,17 +16,20 @@ class WeatherDescription: Decodable {
     var main: String = ""
 }
 
-class DayWeather {
-    var temperature: Double
+class DayWeather: Object {
+    @Persisted var temperature: Double
     
-    var description: String
+    @Persisted var weatherDescription: String
     
-    var order = 0
+    override init() {
+        self.temperature = 0.0
+        self.weatherDescription = ""
+    }
     
     init(temp: Double, weatherDescription: String)
     {
         self.temperature = temp
-        self.description = weatherDescription
+        self.weatherDescription = weatherDescription
     }
 }
 
@@ -41,26 +44,48 @@ class Result: Decodable {
 
 class TodayWeatherViewController: UIViewController {
     
+    @IBOutlet weak var weatherLabel: UILabel!
+    
+    @IBOutlet weak var weatherDescriptionLabel: UILabel!
+    
+    let realm = try! Realm()
+    
     var weatherArray: [DayWeather] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        initWeather()
     }
-    
-    let realm = try! Realm()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Loader.LoadTodayWeather { daysForecast
+        Loader.LoadWeather { daysForecast
             in
             self.weatherArray = []
-            debugPrint(daysForecast[0].main.temp)
             for dayForecast in daysForecast {
                 let dayWeather = DayWeather(temp: dayForecast.main.temp, weatherDescription: dayForecast.weather[0].main)
                 self.weatherArray.append(dayWeather)
             }
+            self.updateWeather()
         }
     }
-  
+    
+    func updateWeather() {
+        if !weatherArray.isEmpty {
+            weatherLabel.text = "\(weatherArray[0].temperature) K"
+            weatherDescriptionLabel.text = weatherArray[0].weatherDescription
+            try! realm.write {
+                for weather in weatherArray {
+                    realm.add(weather)
+                }
+            }
+        }
+    }
+    
+    func initWeather() {
+        let objects = realm.objects(DayWeather.self)
+        weatherArray = objects.map {$0}
+        updateWeather()
+    }
 }

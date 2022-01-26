@@ -17,6 +17,7 @@
 		4B5C119B2794121E007EC1D1 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5C11962794121E007EC1D1 /* ToDoTableViewCell.swift */; };
 		4B5C11A3279412D8007EC1D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5C11A2279412D8007EC1D1 /* ViewController.swift */; };
 		4B5C11A82794131A007EC1D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B5C11A72794131A007EC1D1 /* Main.storyboard */; };
+		4B65DEFE279A971000AE3B8A /* FiveDayWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B65DEFD279A971000AE3B8A /* FiveDayWeatherViewController.swift */; };
 		4B6CB7A82795812000225677 /* ToDoCoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CB7A72795812000225677 /* ToDoCoreViewController.swift */; };
 		4B6CB7AE2795B73F00225677 /* TodayWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CB7AD2795B73F00225677 /* TodayWeatherViewController.swift */; };
 		4B6CB7B02795B94200225677 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CB7AF2795B94200225677 /* Loader.swift */; };
@@ -37,6 +38,7 @@
 		4B5C11962794121E007EC1D1 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 		4B5C11A2279412D8007EC1D1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4B5C11A72794131A007EC1D1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4B65DEFD279A971000AE3B8A /* FiveDayWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDayWeatherViewController.swift; sourceTree = "<group>"; };
 		4B6CB7A72795812000225677 /* ToDoCoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCoreViewController.swift; sourceTree = "<group>"; };
 		4B6CB7AD2795B73F00225677 /* TodayWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeatherViewController.swift; sourceTree = "<group>"; };
 		4B6CB7AF2795B94200225677 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				4B5C118827941190007EC1D1 /* Assets.xcassets */,
 				4B5C11A72794131A007EC1D1 /* Main.storyboard */,
 				4B6CB7AD2795B73F00225677 /* TodayWeatherViewController.swift */,
+				4B65DEFD279A971000AE3B8A /* FiveDayWeatherViewController.swift */,
 				4B6CB7AF2795B94200225677 /* Loader.swift */,
 				4B5C118A27941190007EC1D1 /* LaunchScreen.storyboard */,
 				4B5C118D27941190007EC1D1 /* Info.plist */,
@@ -230,6 +233,7 @@
 				4B5C117D2794118E007EC1D1 /* AppDelegate.swift in Sources */,
 				4B5C119B2794121E007EC1D1 /* ToDoTableViewCell.swift in Sources */,
 				4B5C117F2794118E007EC1D1 /* SceneDelegate.swift in Sources */,
+				4B65DEFE279A971000AE3B8A /* FiveDayWeatherViewController.swift in Sources */,
 				4B5C11982794121E007EC1D1 /* Persistance.swift in Sources */,
 				4B6CB7B02795B94200225677 /* Loader.swift in Sources */,
 				4B5C11992794121E007EC1D1 /* ToDoViewController.swift in Sources */,
