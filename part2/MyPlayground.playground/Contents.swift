@@ -85,3 +85,16 @@ extension Comparable {
         }
     }
 }
+
+extension Array where Element == Int {
+    func sum() -> Int {
+        var sum = 0
+        let n = self.count
+        for i in 0..<n {
+            sum += self[i]
+        }
+        return sum
+    }
+}
+
+print([1, 2, 3].sum())
