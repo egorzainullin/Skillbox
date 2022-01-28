@@ -1,4 +1,5 @@
 import UIKit
+import Darwin
 
 // 4. Для того, чтобы не писать один и тот же код для разных типов.
 
@@ -85,3 +86,60 @@ var arr = [1, 2, 1, 3, 2]
 arr.distinct()
 
 // 8
+infix operator ^^
+
+func ^^(x: Int, n: Int) -> Int {
+    var degree = 1
+    for _ in 0..<n {
+        degree *= x
+    }
+    return x
+}
+
+infix operator ~>
+
+func ~> (a: Int, to: inout Int) {
+    to = 2 * a
+}
+
+infix operator <*
+
+extension UIViewController: UITableViewDelegate {
+    
+}
+
+func <*(controller: UIViewController, table: UITableView) {
+    table.delegate = controller
+}
+
+func +(a: CustomStringConvertible, b: CustomStringConvertible) -> CustomStringConvertible {
+    return "\(a)\(b)"
+}
+
+protocol Animator {
+    associatedtype Value
+    associatedtype Target
+    
+    init(_ value: Value)
+    
+    func animate(target: Target)
+}
+
+class BackgroundAnimator: Animator {
+    typealias Value = UIColor
+    
+    typealias Target = UIView
+    
+    let newColor: UIColor
+    
+    required init(_ value: UIColor) {
+        newColor = value
+    }
+    
+    func animate(target: UIView) {
+        UIView.animate(withDuration: 0.3, animations: {
+            target.backgroundColor = self.newColor
+        })
+    }
+}
+
