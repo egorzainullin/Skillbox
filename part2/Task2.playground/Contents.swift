@@ -143,3 +143,38 @@ class BackgroundAnimator: Animator {
     }
 }
 
+class CenterAnimator: Animator {
+    typealias Value = CGPoint
+    
+    typealias Target = UIView
+    
+    let newCenter: CGPoint
+    
+    required init(_ value: CGPoint) {
+        newCenter = value
+    }
+    
+    func animate(target: UIView) {
+        UIView.animate(withDuration: 0.3, animations: {
+            target.center = self.newCenter
+        })
+    }
+}
+
+class ScaleAnimator: Animator {
+    typealias Value = CGPoint
+    
+    typealias Target = UIView
+    
+    let newScale: CGPoint
+    
+    required init(_ value: CGPoint) {
+        newScale = value
+    }
+    
+    func animate(target: UIView) {
+        UIView.animate(withDuration: 0.3) {
+            target.transform.scaledBy(x: self.newScale.x, y: self.newScale.y)
+        }
+    }
+}
