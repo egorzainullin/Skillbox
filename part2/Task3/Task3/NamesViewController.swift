@@ -7,7 +7,7 @@
 
 import UIKit
 import Bond
-import simd
+import ReactiveKit
 
 class NamesViewController: UIViewController {
     
@@ -15,11 +15,17 @@ class NamesViewController: UIViewController {
     
     @IBOutlet weak var searchTextField: UITextField!
     
-    var names = MutableObservableArray(["Anton", "Nikita", "Alex", "Misha",
-                                        "Tanya", "Yulya", "Pasha", "Sasha",
-                                        "Dasha", "Vanya", "Vanya2", "Tony",
-                                        "Peter", "Norman", "Kurt", "Richard",
-                                        "Danya", "Sonya", "Ruslan", "Ruslan2"])
+    var names = MutableObservableArray<String>()
+    
+    var allNames = ["Anton", "Nikita", "Alex", "Misha",
+                    "Tanya", "Yulya", "Pasha", "Sasha",
+                    "Dasha", "Vanya", "Vanya2", "Tony",
+                    "Peter", "Norman", "Kurt", "Richard",
+                    "Danya", "Sonya", "Ruslan", "Ruslan2"]
+    
+    var newNames = [String]()
+    
+    var textToSearch = Property("")
     
     @IBAction func addName(_ sender: Any) {
         names.insert("Random Name", at: 0)
@@ -31,19 +37,34 @@ class NamesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        names.insert(contentsOf: allNames, at: 0)
         searchTextField.reactive.text
             .throttle(for: 2)
-            .combineLatest(with: names)
-            // Хочется отфильтровать то, что строка начинается на textToSearch
-            .filter {textToSearch, names -> Bool in
-                return true
-            }
-            .map({$1})
+                    .observeNext {value in
+                        if let value = value,
+                           !value.isEmpty {
+                            self.newNames = self.allNames.filter { (name: String) -> Bool in
+                                return name.lowercased().contains(value.lowercased())
+                            }
+                            self.names.removeAll()
+                            self.names.insert(contentsOf: self.newNames, at: 0)
+                        }
+                        else {
+                            self.names.insert(contentsOf: self.allNames, at: 0)
+                        }
+                    }
+                    .dispose(in: reactive.bag)
+        names
             .bind(to: tableView) {(dataSource, indexPath, tableView) -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withIdentifier: "NameTableViewCell") as! NameTableViewCell
             cell.nameLabel.text = dataSource[indexPath.row]
             return cell
         }
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        reactive.bag.dispose()
     }
 }
