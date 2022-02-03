@@ -25,6 +25,14 @@ class ToDoElement: Object {
     { didSet {delegate?.elementUpdated(sender: self)} }
     
     var delegate: ElementUpdatedDelegate?
+    
+    init(isDone: Bool, isDeleted: Bool, dateToDo: Date, text: String) {
+        self.isDone = isDone
+        self.isDeleted = isDeleted
+        self.dateOfCreation = Date()
+        self.dateToDo = dateToDo
+        self.text = text
+    }
 }
 
 protocol ElementUpdatedDelegate {

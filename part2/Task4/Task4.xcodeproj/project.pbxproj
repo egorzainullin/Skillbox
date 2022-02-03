@@ -16,6 +16,7 @@
 		4B48F3B827AACB28004D643E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B48F3B627AACB28004D643E /* LaunchScreen.storyboard */; };
 		4B48F3C027AAF27F004D643E /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B48F3BF27AAF27F004D643E /* ToDoModel.swift */; };
 		4B48F3C227AAF808004D643E /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B48F3C127AAF808004D643E /* MainTableViewCell.swift */; };
+		4BE8E97627AC49B9006F5F15 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE8E97527AC49B9006F5F15 /* AddViewController.swift */; };
 		B4723BC3DCD577C349541454 /* Pods_Task4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24942C3599D88A92057F33A6 /* Pods_Task4.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		4B48F3B927AACB28004D643E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B48F3BF27AAF27F004D643E /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
 		4B48F3C127AAF808004D643E /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		4BE8E97527AC49B9006F5F15 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		D08FB483AC3F55FA3C8B1BCE /* Pods-Task4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task4.debug.xcconfig"; path = "Target Support Files/Pods-Task4/Pods-Task4.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 				4B48F3AA27AACB26004D643E /* SceneDelegate.swift */,
 				4B48F3AC27AACB26004D643E /* ViewController.swift */,
 				4B48F3C127AAF808004D643E /* MainTableViewCell.swift */,
+				4BE8E97527AC49B9006F5F15 /* AddViewController.swift */,
 				4B48F3BF27AAF27F004D643E /* ToDoModel.swift */,
 				4B48F3AE27AACB26004D643E /* Main.storyboard */,
 				4B48F3B427AACB28004D643E /* Assets.xcassets */,
@@ -217,6 +220,7 @@
 			files = (
 				4B48F3AD27AACB26004D643E /* ViewController.swift in Sources */,
 				4B48F3B327AACB26004D643E /* Task4.xcdatamodeld in Sources */,
+				4BE8E97627AC49B9006F5F15 /* AddViewController.swift in Sources */,
 				4B48F3C027AAF27F004D643E /* ToDoModel.swift in Sources */,
 				4B48F3A927AACB26004D643E /* AppDelegate.swift in Sources */,
 				4B48F3C227AAF808004D643E /* MainTableViewCell.swift in Sources */,
