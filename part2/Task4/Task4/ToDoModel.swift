@@ -36,9 +36,12 @@ class ToDoModel {
     
     private let realm = try! Realm()
     
+    private var delegate: ElementUpdatedDelegate?
+    
     static func createToDoModel(delegate: ElementUpdatedDelegate?) -> ToDoModel {
         let model = ToDoModel()
         model.elements = model.realm.objects(ToDoElement.self).map({$0})
+        model.delegate = delegate
         for element in model.elements {
             element.delegate = delegate
         }
@@ -57,6 +60,8 @@ class ToDoModel {
         try! realm.write({
             realm.add(element)
             elements.append(element)
+            element.delegate = delegate
+            element.delegate?.elementUpdated(sender: element)
         })
     }
 }
