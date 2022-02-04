@@ -16,7 +16,8 @@ class AddViewController: UIViewController {
     let model = ToDoModel.createToDoModel(delegate: nil)
     
     @IBAction func addTask(_ sender: Any) {
-        let element = ToDoElement(isDone: false, isDeleted: false, dateToDo: datePicker.date, text: taskTextField.text ?? "")
+        let element = ToDoElement()
+        element.update(isDone: false, isDeleted: false, dateToDo: datePicker.date, text: taskTextField.text ?? "")
         model.addTask(element: element)
     }
     

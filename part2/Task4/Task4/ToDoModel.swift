@@ -10,29 +10,36 @@ import RealmSwift
 
 class ToDoElement: Object {
     @Persisted var isDone: Bool
-    { didSet {delegate?.elementUpdated(sender: self)} }
+    { didSet {notify()}}
     
     @Persisted var isDeleted: Bool
-    { didSet {delegate?.elementUpdated(sender: self)} }
+    { didSet {notify()}}
     
     @Persisted var dateOfCreation: Date
-    { didSet {delegate?.elementUpdated(sender: self)} }
+    { didSet {notify()}}
     
     @Persisted var dateToDo: Date
-    { didSet {delegate?.elementUpdated(sender: self)} }
+    { didSet {notify()}}
     
     @Persisted var text: String
-    { didSet {delegate?.elementUpdated(sender: self)} }
+    { didSet {notify()}}
     
-    var delegate: ElementUpdatedDelegate?
+    var delegates: [ElementUpdatedDelegate] = []
     
-    init(isDone: Bool, isDeleted: Bool, dateToDo: Date, text: String) {
+    private func notify() {
+        for delegate in delegates {
+            delegate.elementUpdated(sender: self)
+        }
+    }
+    
+    func update(isDone: Bool, isDeleted: Bool, dateToDo: Date, text: String) {
         self.isDone = isDone
         self.isDeleted = isDeleted
         self.dateOfCreation = Date()
         self.dateToDo = dateToDo
         self.text = text
     }
+    
 }
 
 protocol ElementUpdatedDelegate {
@@ -42,21 +49,32 @@ protocol ElementUpdatedDelegate {
 class ToDoModel {
     private var elements: [ToDoElement] = []
     
+    private var delegates: [ElementUpdatedDelegate] = []
+    
     private let realm = try! Realm()
     
-    private var delegate: ElementUpdatedDelegate?
+    private static let model = ToDoModel()
+    
+    private init()
+    {
+        try! realm.write({
+            elements = realm.objects(ToDoElement.self).map({$0})
+        })
+    }
     
     static func createToDoModel(delegate: ElementUpdatedDelegate?) -> ToDoModel {
-        let model = ToDoModel()
-        model.elements = model.realm.objects(ToDoElement.self).map({$0})
-        model.delegate = delegate
-        for element in model.elements {
-            element.delegate = delegate
+        let model = ToDoModel.model
+        if let delegate = delegate {
+            model.delegates.append(delegate)
+            for element in model.elements {
+                element.delegates.append(delegate)
+            }
         }
         return model
     }
     
     public func getCurrentTasks() -> [ToDoElement] {
+
         return elements.filter({element in !element.isDeleted && !element.isDone})
     }
     
@@ -68,8 +86,10 @@ class ToDoModel {
         try! realm.write({
             realm.add(element)
             elements.append(element)
-            element.delegate = delegate
-            element.delegate?.elementUpdated(sender: element)
+            element.delegates = delegates
+            for elementDelegate in element.delegates {
+                elementDelegate.elementUpdated(sender: element)
+            }
         })
     }
 }

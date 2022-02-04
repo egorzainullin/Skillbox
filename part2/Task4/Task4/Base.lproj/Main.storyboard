@@ -50,7 +50,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="po2-uO-Kap" secondAttribute="trailing" id="fpm-9i-FHc"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="jk9-vt-hjf"/>
+                    <tabBarItem key="tabBarItem" title="Add" id="jk9-vt-hjf" userLabel="Add"/>
                     <connections>
                         <outlet property="datePicker" destination="pz4-dS-uUx" id="GFG-la-PGe"/>
                         <outlet property="taskTextField" destination="5Y6-T1-ksg" id="8gx-Wp-NV7"/>
@@ -63,7 +63,7 @@
         <!--Tasks-->
         <scene sceneID="iA5-Zr-SzG">
             <objects>
-                <viewController title="Tasks" id="97i-I2-C8L" sceneMemberID="viewController">
+                <viewController title="Tasks" id="97i-I2-C8L" customClass="ViewController" customModule="Task4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fhi-KJ-noC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,20 +86,26 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="35.5"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3D-Aa-LH5">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="152.5" height="35.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="129" height="35.5"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain" image="poweroff" catalog="system"/>
+                                                                    <connections>
+                                                                        <action selector="makeDone:" destination="IXz-7B-q5L" eventType="touchUpInside" id="ff9-pT-Naw"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1J-6v-y5p">
-                                                                    <rect key="frame" x="152.5" y="0.0" width="140.5" height="35.5"/>
+                                                                    <rect key="frame" x="129" y="0.0" width="119" height="35.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LT9-e8-XJD">
-                                                                    <rect key="frame" x="293" y="0.0" width="81" height="35.5"/>
+                                                                    <rect key="frame" x="248" y="0.0" width="126" height="35.5"/>
                                                                     <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain"/>
+                                                                    <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system"/>
+                                                                    <connections>
+                                                                        <action selector="deleteTask:" destination="IXz-7B-q5L" eventType="touchUpInside" id="Z8P-pQ-76s"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -125,11 +131,16 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="srS-Fg-mx5" secondAttribute="trailing" id="ahH-i3-5up"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateOfCreationLabel" destination="1Bg-rV-Hz5" id="HiL-f7-vk0"/>
+                                            <outlet property="dateToDoLabel" destination="QW5-CI-NVa" id="ddF-tt-yGj"/>
+                                            <outlet property="desriptionLabel" destination="j1J-6v-y5p" id="T3N-cB-89S"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="EJ7-9T-rNt"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="YOv-ow-1u5"/>
+                                    <outlet property="dataSource" destination="97i-I2-C8L" id="9ae-Sk-7mp"/>
+                                    <outlet property="delegate" destination="97i-I2-C8L" id="JmM-a0-Obn"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -142,7 +153,10 @@
                             <constraint firstItem="ALk-Zx-JNw" firstAttribute="top" secondItem="Fhi-KJ-noC" secondAttribute="top" id="uOq-Sh-qpF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="qMm-zR-0A8"/>
+                    <tabBarItem key="tabBarItem" title="Tasks" id="qMm-zR-0A8" userLabel="Tasks"/>
+                    <connections>
+                        <outlet property="tableView" destination="ALk-Zx-JNw" id="fw9-3E-JF0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c2A-xs-t1z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,7 +165,7 @@
         <!--Deleted and done tasks-->
         <scene sceneID="sHo-7Y-tdb">
             <objects>
-                <viewController title="Deleted and done tasks" id="a7R-zO-SU1" sceneMemberID="viewController">
+                <viewController title="Deleted and done tasks" id="a7R-zO-SU1" customClass="DoneViewController" customModule="Task4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rQG-9r-LIY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,7 +174,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MainTableViewCell" rowHeight="174" id="lnp-Qx-Ab4" customClass="MainTableViewCell" customModule="Task4" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DoneTableViewCell" rowHeight="174" id="lnp-Qx-Ab4" customClass="DoneTableViewCell" customModule="Task4" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="174"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lnp-Qx-Ab4" id="YKh-GX-ewq">
@@ -173,8 +187,16 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Ykw-p6-jaH">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="35.5"/>
                                                             <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldz-Ex-fMp">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="194.5" height="35.5"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain" image="poweroff" catalog="system"/>
+                                                                    <connections>
+                                                                        <action selector="restore:" destination="lnp-Qx-Ab4" eventType="touchUpInside" id="4IJ-G0-Szq"/>
+                                                                    </connections>
+                                                                </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y85-6r-aqv">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="35.5"/>
+                                                                    <rect key="frame" x="194.5" y="0.0" width="179.5" height="35.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -203,11 +225,16 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="XyE-kd-5bJ" secondAttribute="trailing" id="wHe-EO-4Fr"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateOfCreationLabel" destination="iUh-bY-p1S" id="vc0-Fh-KfE"/>
+                                            <outlet property="dateToDoLabel" destination="jgr-hW-sDK" id="bDb-nW-4RX"/>
+                                            <outlet property="textOfTaskLabel" destination="Y85-6r-aqv" id="Dr6-qa-i82"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="zqc-Ip-3Jp"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="TsZ-zZ-b8v"/>
+                                    <outlet property="dataSource" destination="a7R-zO-SU1" id="u1R-v9-suy"/>
+                                    <outlet property="delegate" destination="a7R-zO-SU1" id="PhM-Po-oYf"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -220,7 +247,10 @@
                             <constraint firstItem="hyx-vC-ga6" firstAttribute="leading" secondItem="kea-LY-WKc" secondAttribute="leading" id="uzb-KP-OwL"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="SZo-b0-YXG"/>
+                    <tabBarItem key="tabBarItem" title="Done" id="SZo-b0-YXG" userLabel="Done"/>
+                    <connections>
+                        <outlet property="tableView" destination="hyx-vC-ga6" id="L0Q-PS-qVY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qvY-qd-0ZW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -249,6 +279,7 @@
     </scenes>
     <resources>
         <image name="poweroff" catalog="system" width="128" height="121"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
