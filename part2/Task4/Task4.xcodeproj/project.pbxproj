@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B3C953727AE60240061FC5A /* DoneTasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C953627AE60240061FC5A /* DoneTasksViewModel.swift */; };
+		4B3C953927AE6A180061FC5A /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C953827AE6A180061FC5A /* AddViewModel.swift */; };
 		4B48F3A927AACB26004D643E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B48F3A827AACB26004D643E /* AppDelegate.swift */; };
 		4B48F3AB27AACB26004D643E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B48F3AA27AACB26004D643E /* SceneDelegate.swift */; };
 		4B48F3AD27AACB26004D643E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B48F3AC27AACB26004D643E /* ViewController.swift */; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		24942C3599D88A92057F33A6 /* Pods_Task4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35DA1A968A833CE1452BCFF6 /* Pods-Task4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task4.release.xcconfig"; path = "Target Support Files/Pods-Task4/Pods-Task4.release.xcconfig"; sourceTree = "<group>"; };
+		4B3C953627AE60240061FC5A /* DoneTasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTasksViewModel.swift; sourceTree = "<group>"; };
+		4B3C953827AE6A180061FC5A /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
 		4B48F3A527AACB26004D643E /* Task4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Task4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B48F3A827AACB26004D643E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B48F3AA27AACB26004D643E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,7 +107,9 @@
 				4B48F3AE27AACB26004D643E /* Main.storyboard */,
 				4BEC650627ADA5A300156E15 /* TasksViewController.swift */,
 				4BEC650A27ADA73200156E15 /* TasksViewModel.swift */,
+				4B3C953827AE6A180061FC5A /* AddViewModel.swift */,
 				4BEC650827ADA5AF00156E15 /* DoneTasksViewController.swift */,
+				4B3C953627AE60240061FC5A /* DoneTasksViewModel.swift */,
 				4BEC650427ADA58B00156E15 /* AddTaskViewController.swift */,
 				4B48F3B427AACB28004D643E /* Assets.xcassets */,
 				4B48F3B627AACB28004D643E /* LaunchScreen.storyboard */,
@@ -239,10 +245,12 @@
 				4BEC650127AD310D00156E15 /* DoneViewController.swift in Sources */,
 				4B48F3AD27AACB26004D643E /* ViewController.swift in Sources */,
 				4BEC650727ADA5A300156E15 /* TasksViewController.swift in Sources */,
+				4B3C953927AE6A180061FC5A /* AddViewModel.swift in Sources */,
 				4BEC650927ADA5AF00156E15 /* DoneTasksViewController.swift in Sources */,
 				4B48F3B327AACB26004D643E /* Task4.xcdatamodeld in Sources */,
 				4BE8E97627AC49B9006F5F15 /* AddViewController.swift in Sources */,
 				4B48F3C027AAF27F004D643E /* ToDoModel.swift in Sources */,
+				4B3C953727AE60240061FC5A /* DoneTasksViewModel.swift in Sources */,
 				4BEC650B27ADA73200156E15 /* TasksViewModel.swift in Sources */,
 				4B48F3A927AACB26004D643E /* AppDelegate.swift in Sources */,
 				4B48F3C227AAF808004D643E /* MainTableViewCell.swift in Sources */,

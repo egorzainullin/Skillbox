@@ -21,7 +21,7 @@ class DoneTableViewCell: UITableViewCell {
         }
     }
     
-    @IBOutlet weak var textOfTaskLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var dateOfCreationLabel: UILabel!
     

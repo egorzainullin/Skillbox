@@ -9,21 +9,32 @@ import UIKit
 
 class AddTaskViewController: UIViewController {
 
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBOutlet weak var textOfTaskTextField: UITextField!
+    
+    @IBOutlet weak var addTaskButton: UIButton!
+    
+    let viewModel = AddViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        bind()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        reactive.bag.dispose()
     }
-    */
-
+    
+    func bind() {
+        datePicker.reactive.date.bind(to: viewModel.dateToDo)
+        textOfTaskTextField.reactive.text
+            .ignoreNils()
+            .bind(to: viewModel.text)
+        addTaskButton.reactive.tap.observeNext {
+            self.viewModel.addTask()
+        }
+        .dispose(in: reactive.bag)
+    }
 }

@@ -6,24 +6,30 @@
 //
 
 import UIKit
+import ReactiveKit
+import Bond
 
 class DoneTasksViewController: UIViewController {
-
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var viewModel = DoneTasksViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        bind()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func bind() {
+        viewModel.tasks.bind(to: tableView) {
+            dataSource, indexPath, tableView in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DoneTableViewCell") as! DoneTableViewCell
+            let element = dataSource[indexPath.row]
+            cell.element = element
+            cell.dateOfCreationLabel.text = element.dateOfCreation.description(with: Locale.current)
+            cell.dateToDoLabel.text = element.dateToDo.description(with: Locale.current)
+            cell.descriptionLabel.text = element.text
+            return cell
+        }
     }
-    */
-
 }

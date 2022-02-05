@@ -32,7 +32,7 @@ extension DoneViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DoneTableViewCell") as! DoneTableViewCell
         let element = doneOrDeletedTasks[indexPath.row]
         cell.element = element
-        cell.textOfTaskLabel.text = element.text
+        cell.descriptionLabel.text = element.text
         cell.dateToDoLabel.text = element.dateToDo.description(with: Locale.current)
         cell.dateOfCreationLabel.text = element.dateOfCreation.description(with: Locale.current)
         return cell

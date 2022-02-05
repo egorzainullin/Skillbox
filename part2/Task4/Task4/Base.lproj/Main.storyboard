@@ -228,7 +228,7 @@
                                         <connections>
                                             <outlet property="dateOfCreationLabel" destination="iUh-bY-p1S" id="vc0-Fh-KfE"/>
                                             <outlet property="dateToDoLabel" destination="jgr-hW-sDK" id="bDb-nW-4RX"/>
-                                            <outlet property="textOfTaskLabel" destination="Y85-6r-aqv" id="Dr6-qa-i82"/>
+                                            <outlet property="descriptionLabel" destination="Y85-6r-aqv" id="Dr6-qa-i82"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -319,6 +319,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" id="PYg-Xx-gav" userLabel="Add"/>
+                    <connections>
+                        <outlet property="addTaskButton" destination="7pX-Y0-RJB" id="yzL-wh-SLn"/>
+                        <outlet property="datePicker" destination="lHw-7N-7Qi" id="4pW-Qc-c2u"/>
+                        <outlet property="textOfTaskTextField" destination="sWq-X1-uN3" id="DCd-Oy-LlT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BTy-4n-NK6" sceneMemberID="firstResponder"/>
             </objects>
@@ -492,7 +497,7 @@
                                         <connections>
                                             <outlet property="dateOfCreationLabel" destination="8ya-qz-NdV" id="rPI-pQ-Puj"/>
                                             <outlet property="dateToDoLabel" destination="2gJ-Bf-fle" id="nli-Is-sJp"/>
-                                            <outlet property="textOfTaskLabel" destination="7wn-CM-ftV" id="X53-gv-PiY"/>
+                                            <outlet property="descriptionLabel" destination="7wn-CM-ftV" id="X53-gv-PiY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -512,6 +517,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Done" id="lJF-7P-1IM" userLabel="Done"/>
+                    <connections>
+                        <outlet property="tableView" destination="ggZ-T3-Wvg" id="m0X-mH-ofH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ylQ-H4-uMM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

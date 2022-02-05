@@ -11,13 +11,22 @@ import ReactiveKit
 
 class TasksViewController: UIViewController {
 
+    @IBOutlet weak var deleteButton: UIButton!
+    
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var makeDoneButton: UIButton!
     
     var viewModel = TasksViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        reactive.bag.dispose()
     }
     
     private func bind() {
